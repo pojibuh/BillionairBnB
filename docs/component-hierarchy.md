@@ -14,3 +14,13 @@
 
 ### Bookings Container
 + k
+
+# Routes
+
+path      | component
+----------|-----------
+'/'       |
+''        |
+''        |
+''        |
+''        |
