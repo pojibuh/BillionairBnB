@@ -1,26 +1,51 @@
 # Component Hierarchy
 
-### Header Container
-+ Header
+### HeaderContainer
++ HeaderLoggedIn
++ HeaderLoggedOut
+  + LogInModal
+    + LogInContainer
+      + AuthForm
 
-### Home Container
-+ f
+  + SignUpModal
+    + SignUpContainer
+      + AuthForm
 
-### Search Container
-+ u
+### HomeContainer
++ SearchBarContainer
+  + SearchBar
++ FeaturedHomesContainer
+  + FeaturedHomes
+    + HomeItem
 
-### Spot Container
-+ c
+### SearchContainer
++ MapContainer
++ HomesContainer
++ PriceRangeContainer
+  + PriceRanges
++ SearchBarContainer
+  + SearchBar
 
-### Bookings Container
-+ k
+### SpotContainer
++ ReviewContainer
+  + Review
++ SpotDetailContainer
+  + SpotDetails
++ BookingsContainer
++ MapContainer
+
+### BookingsContainer
++ CheckInContainer
+  + CheckInDate
++ CheckOutContainer
+  + CheckOutDate
 
 # Routes
 
-path      | component
-----------|-----------
-'/'       |
-''        |
-''        |
-''        |
-''        |
+  path          | component
+--------------- |-----------
+'/'             | "HeaderContainer"
+'/home'         | ""
+'/spots/:spotId'| ""
+'bookings'      | ""
+''              | ""
