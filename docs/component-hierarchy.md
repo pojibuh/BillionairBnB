@@ -45,7 +45,5 @@
   path          | component
 --------------- |-----------
 '/'             | "HeaderContainer"
-'/home'         | ""
-'/spots/:spotId'| ""
-'bookings'      | ""
-''              | ""
+'/home'         | "HomeContainer"
+'/spots/:spotId'| "SpotContainer"
