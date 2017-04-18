@@ -16,7 +16,7 @@ BillionairBnB is a web application inspired by airBnB with the intention of prov
 - [ ] Production README
 
 ## Design Docs
-(These should all be links)
+
 - [View Wireframes](wireframes/)
 - [React Components](component-hierarchy.md)
 - [API Endpoints](api-endpoints.md)
