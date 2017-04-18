@@ -25,7 +25,7 @@ BillionairBnB is a web application inspired by airBnB with the intention of prov
 
 ## Implementation Timeline
 
-### Phase 1: Setup User Auth for frontend and backend (1 day)
+### Phase 1: Setup User Auth for frontend and backend (2 days)
 Goal: Functional frontpage with login and signup modals
 
 ### Phase 2: Spot models and featured spots (2 days)
