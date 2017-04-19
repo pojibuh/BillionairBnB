@@ -1,1 +1,1 @@
-json.partial! @user
+json.extract! @user, :fname, :lname

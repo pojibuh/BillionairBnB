@@ -27,13 +27,18 @@ class SignupForm extends React.Component {
     return (event => this.setState({[key]: event.currentTarget.value}));
   }
 
+  renderErrors() {
+    if (this.props.errors) {
+      const errors = this.props.errors.map(err => <li>{err}</li>);
+    }
+  }
+
   render() {
     const action = 'users';
-    const errors = this.props.errors.map(err => <li>{err}</li>);
     return(
       <div>
         <ul>
-          {errors}
+          { this.renderErrors() }
         </ul>
         <h2>Sign Up</h2>
         <br/>

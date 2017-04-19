@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import SignupForm from './signup_form';
 import { signup } from '../../actions/session_actions';
 
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = (state) => {
   return {
     loggedIn: !!state.session.currentUser,
     errors: state.session.errors,
@@ -10,7 +10,7 @@ const mapStateToProps = (state, ownProps) => {
   };
 };
 
-const mapDispatchToProps = (dispatch, ownProps) => {
+const mapDispatchToProps = (dispatch) => {
   return {
     processForm: (user) => dispatch(signup(user)),
   };

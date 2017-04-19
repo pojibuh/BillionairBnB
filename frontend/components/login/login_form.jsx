@@ -25,13 +25,18 @@ class LoginForm extends React.Component {
     return (event => this.setState({[key]: event.currentTarget.value}));
   }
 
+  renderErrors() {
+    if (this.props.errors) {
+      const errors = this.props.errors.map(err => <li>{err}</li>);
+    }
+  }
+
   render() {
     const action = 'session';
-    const errors = this.props.errors.map(err => <li>{err}</li>);
     return(
       <div>
         <ul>
-          {errors}
+          { this.renderErrors() }
         </ul>
         <h2>Log In</h2>
         <br/>
