@@ -1,9 +1,10 @@
 import React from 'react';
+import NavigationBarContainer from './navigation/navigation_bar_container';
 import GreetingContainer from './greeting/greeting_container';
 
 const App = ({ children }) => (
   <div>
-    <h1>Welcome to BillionairBnB</h1>
+    <NavigationBarContainer />
     <GreetingContainer />
     { children }
   </div>
