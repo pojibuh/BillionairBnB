@@ -12,7 +12,7 @@ class NavigationBar extends React.Component {
     return (
       <nav className="navbar">
         <div className="navbar-left">
-          <h3>BillionairBnB</h3>
+          <a href='/#/'>BillionairBnB</a>
         </div>
         <div className="navbar-right">
           <div className="signup">

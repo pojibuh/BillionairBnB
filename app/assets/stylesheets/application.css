@@ -14,6 +14,10 @@
  *= require_self
  */
 
+ body{
+  font-family: 'Lato', sans-serif;
+ }
+
 .navbar {
   display: flex;
   flex-direction: row;
@@ -22,16 +26,20 @@
 }
 
 .navbar-left {
-  padding-left: 15px;
+  margin: 5px;
+  padding-left: 5px;
+  padding-top: 9px;
 }
 
-h3 {
-  color: #ff6666;
+.navbar-left a {
+  color: #f16664;
+  text-decoration: none;
+  font-size: 25px;
 }
 
 .navbar-right {
   width: 15%;
-  padding-top: 15px;
+  padding-top: 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -39,12 +47,20 @@ h3 {
 
 .signup {
   margin: 5px;
+  box-sizing: border-box;
 }
 
 .navbar-right a {
+  color: black;
   width: 100%;
   height: 100%;
   margin: inherit;
+  text-decoration: none;
+}
+
+.navbar-right a:hover {
+  padding-bottom: 6px;
+  border-bottom: 2px solid black;
 }
 
 .login {
