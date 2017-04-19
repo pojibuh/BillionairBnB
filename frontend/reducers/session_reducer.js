@@ -1,4 +1,4 @@
-import { RECEIVE_ERRORS, RECEIVE_CURRENT_USER } from '../actions/session_actions';
+import { RECEIVE_ERRORS, RECEIVE_CURRENT_USER, CLEAR_ERRORS } from '../actions/session_actions';
 
 const initialState = {
     currentUser: null,
@@ -19,6 +19,9 @@ export default function SessionReducer(state = initialState, action) {
       newState = Object.assign({}, state);
       newState.errors = errors;
       return newState;
+    case CLEAR_ERRORS:
+      let noErrors = action.errors;
+      return Object.assign({}, state, { errors: noErrors });
     default:
       return state;
   }

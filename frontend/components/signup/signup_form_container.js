@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import SignupForm from './signup_form';
-import { signup } from '../../actions/session_actions';
+import { signup, clearErrors } from '../../actions/session_actions';
+import { deactivateModal, activateModal } from '../../actions/modal_actions';
 
 const mapStateToProps = (state) => {
   return {
@@ -13,6 +14,9 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     processForm: (user) => dispatch(signup(user)),
+    deactivate: (modalType) => dispatch(deactivateModal(modalType)),
+    activate: (modalType) => dispatch(activateModal(modalType)),
+    clear: () => dispatch(clearErrors())
   };
 };
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, withRouter } from 'react-router';
+import { withRouter } from 'react-router';
 
 class LoginForm extends React.Component {
 	constructor(props) {
@@ -14,11 +14,7 @@ class LoginForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
-    this.props.processForm(user).then(() => this.redirect());
-  }
-
-  redirect() {
-    this.props.router.push('/');
+    this.props.processForm(user).then(() => this.props.deactivate('login'));
   }
 
   linkState(key) {
@@ -30,6 +26,10 @@ class LoginForm extends React.Component {
       const errors = this.props.errors.errors.map(err => <li>{err}</li>);
       return errors;
     }
+  }
+
+  componentDidMount() {
+    this.props.clear();
   }
 
   render() {
@@ -50,7 +50,7 @@ class LoginForm extends React.Component {
           </label>
           <input type="submit" value="Log In"/>
         </form>
-        <Link to='/signup'>Don't have an account? Sign Up!</Link>
+        <button onClick={() => this.props.activate('signup')}>Don't have an account? Sign Up!</button>
       </div>
     );
   }
