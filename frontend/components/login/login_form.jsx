@@ -41,12 +41,12 @@ class LoginForm extends React.Component {
         </ul>
         <h2>Log In</h2>
         <br/>
-        <form onSubmit={this.handleSubmit}>
-          <label>Email
-            <input type="text" onChange={this.linkState('email')} value={this.state.email}/>
+        <form className="login" onSubmit={this.handleSubmit}>
+          <label>
+            <input type="text" onChange={this.linkState('email')} value={this.state.email} placeholder='Email'/>
           </label>
-          <label>Password
-            <input type="password" onChange={this.linkState('password')} value={this.state.password}/>
+          <label>
+            <input type="password" onChange={this.linkState('password')} value={this.state.password} placeholder='Password'/>
           </label>
           <input type="submit" value="Log In"/>
         </form>

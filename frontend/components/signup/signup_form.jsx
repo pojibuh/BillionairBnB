@@ -43,21 +43,21 @@ class SignupForm extends React.Component {
         </ul>
         <h2>Sign Up</h2>
         <br/>
-        <form onSubmit={this.handleSubmit}>
-          <label>Email
-            <input type="text" onChange={this.linkState('email')} value={this.state.email}/>
+        <form className="signup" onSubmit={this.handleSubmit}>
+          <label>
+            <input type="text" onChange={this.linkState('email')} value={this.state.email} placeholder='Email'/>
           </label>
 
-          <label>First Name
-            <input type="text" onChange={this.linkState('fname')} value={this.state.fname}/>
+          <label>
+            <input type="text" onChange={this.linkState('fname')} value={this.state.fname} placeholder='First Name'/>
           </label>
 
-          <label>Last Name
-            <input type="text" onChange={this.linkState('lname')} value={this.state.lname}/>
+          <label>
+            <input type="text" onChange={this.linkState('lname')} value={this.state.lname} placeholder='Last Name'/>
           </label>
 
-          <label>Create a Password
-            <input type="password" onChange={this.linkState('password')} value={this.state.password}/>
+          <label>
+            <input type="password" onChange={this.linkState('password')} value={this.state.password} placeholder='Create a Password'/>
           </label>
           <input type="submit" value="Sign Up"/>
         </form>
