@@ -16,7 +16,8 @@ class Modal extends React.Component {
     const form = this.props.modalType === 'login' ? <LoginFormContainer/> : <SignupFormContainer/>;
     if (this.props.isOpen) {
       return (
-        <div className="modal-screen">
+        <div>
+          <div className="modal-screen" onClick={() => this.props.deactivateModal(this.props.modalType)}></div>
           <div className="modal-content">
             { form }
           </div>

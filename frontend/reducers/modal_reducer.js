@@ -1,4 +1,4 @@
-import { RECEIVE_COMPONENT, ACTIVATE_MODAL } from '../actions/modal_actions';
+import { RECEIVE_COMPONENT, ACTIVATE_MODAL, DEACTIVATE_MODAL } from '../actions/modal_actions';
 
 const initialState = {
     isOpen: false,
@@ -13,8 +13,11 @@ export default function ModalReducer(state = initialState, action) {
       let modalType = action.modalType;
       return Object.assign({}, state, { modalType });
     case ACTIVATE_MODAL:
-    let activatedModalType = action.modalType;
+      let activatedModalType = action.modalType;
       return Object.assign({}, state, {modalType: activatedModalType, isOpen: true});
+    case DEACTIVATE_MODAL:
+      let deactivatedModalType = action.modalType;
+      return Object.assign({}, state, {modalType: deactivatedModalType, isOpen: false});
     default:
       return state;
   }

@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Modal from './modal';
-import { receiveComponent } from '../../actions/modal_actions';
+import { receiveComponent, deactivateModal } from '../../actions/modal_actions';
 
 const mapStateToProps = (state) => {
   return {
@@ -12,6 +12,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     receiveComponent: (modalType) => dispatch(receiveComponent(modalType)),
+    deactivateModal: (modalType) => dispatch(deactivateModal(modalType))
   };
 };
 

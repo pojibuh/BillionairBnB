@@ -50,14 +50,13 @@
   color: #696969;
   width: 100%;
   height: 100%;
-  margin: inherit;
   text-decoration: none;
   cursor: pointer;
   background: none;
   border: none;
   padding: none;
-  font-size: 14px;
-  border-bottom: 2px transparent;
+  font-size: 13px;
+  border-bottom: 2px white;
 }
 
 .navbar-right button:focus {
@@ -66,5 +65,4 @@
 
 .navbar-right button:hover {
   border-bottom: 2px solid black;
-  padding-bottom: 7px;
 }

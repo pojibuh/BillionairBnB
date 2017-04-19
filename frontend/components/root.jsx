@@ -1,8 +1,7 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { Router, Route, hashHistory, IndexRoute } from 'react-router';
-import LoginFormContainer from './login/login_form_container';
-import SignupFormContainer from './signup/signup_form_container';
+import ModalContainer from './modal/modal_container';
 import App from './app';
 
 const Root = ({ store }) => {
@@ -15,8 +14,8 @@ const Root = ({ store }) => {
     <Provider store={ store }>
       <Router history={ hashHistory }>
         <Route path='/' component={ App }>
-          <Route path='/signup' component={ SignupFormContainer } onEnter={ redirectIfLoggedIn } />
-          <Route path='/login' component={ LoginFormContainer } onEnter={ redirectIfLoggedIn } />
+          <Route path='/signup' component={ ModalContainer } onEnter={ redirectIfLoggedIn } />
+          <Route path='/login' component={ ModalContainer } onEnter={ redirectIfLoggedIn } />
         </Route>
       </Router>
     </Provider>
