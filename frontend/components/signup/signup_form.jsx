@@ -30,6 +30,7 @@ class SignupForm extends React.Component {
   renderErrors() {
     if (this.props.errors) {
       const errors = this.props.errors.map(err => <li>{err}</li>);
+      return errors;
     }
   }
 
@@ -46,12 +47,15 @@ class SignupForm extends React.Component {
           <label>Email
             <input type="text" onChange={this.linkState('email')} value={this.state.email}/>
           </label>
+
           <label>First Name
             <input type="text" onChange={this.linkState('fname')} value={this.state.fname}/>
           </label>
+
           <label>Last Name
             <input type="text" onChange={this.linkState('lname')} value={this.state.lname}/>
           </label>
+
           <label>Create a Password
             <input type="password" onChange={this.linkState('password')} value={this.state.password}/>
           </label>

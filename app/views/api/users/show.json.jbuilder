@@ -1,1 +1,1 @@
-json.extract! @user, :fname, :lname
+json.partial! 'api/users/user', user: @user

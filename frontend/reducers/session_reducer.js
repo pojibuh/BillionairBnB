@@ -15,9 +15,9 @@ export default function SessionReducer(state = initialState, action) {
       newState.errors = [];
       return newState;
     case RECEIVE_ERRORS:
-      newState = Object.assign({}, state);
-      newState.currentUser = null;
-      newState.errors = action.errors;
+      const errors = action.errors;
+      newState = Object.assign({}, state, { errors });
+      debugger
       return newState;
     default:
       return state;

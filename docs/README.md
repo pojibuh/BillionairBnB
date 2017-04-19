@@ -1,6 +1,6 @@
 # BillionairBnB
 
-Heroku Link: (put link here)
+Heroku Link: http://billionairbnb.herokuapp.com/
 Trello Link: (put link here)
 
 ## Minimum Viable Product
