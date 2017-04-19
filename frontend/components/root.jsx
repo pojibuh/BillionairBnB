@@ -2,12 +2,20 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { Router, Route, hashHistory, IndexRoute } from 'react-router';
 import SessionFormContainer from './session/session_form_container';
+import LoginFormContainer from './login/login_form_container';
+import SignupFormContainer from './signup/signup_form_container';
 import App from './app';
 
-
 const Root = ({ store }) => {
+  let action;
+  if (store.getState().login) {
+    action = store.getState().login;
+  } else {
+    action = store.getState().signup;
+  }
+
   const redirectIfLoggedIn = (nextState, replace) => {
-    if (store.getState().session.currentUser) {
+    if (action.currentUser) {
       replace('/');
     }
   };
@@ -15,8 +23,8 @@ const Root = ({ store }) => {
     <Provider store={ store }>
       <Router history={ hashHistory }>
         <Route path='/' component={ App }>
-          <Route path='/signup' component={ SessionFormContainer } onEnter={ redirectIfLoggedIn } />
-          <Route path='/login' component={ SessionFormContainer } onEnter={ redirectIfLoggedIn } />
+          <Route path='/login' component={ LoginFormContainer } onEnter={ redirectIfLoggedIn } />
+          <Route path='/signup' component={ SignupFormContainer } onEnter={ redirectIfLoggedIn } />
         </Route>
       </Router>
     </Provider>
@@ -24,5 +32,3 @@ const Root = ({ store }) => {
 };
 
 export default Root;
-
-// <IndexRoute component={ SearchContainer } />

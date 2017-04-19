@@ -3,8 +3,14 @@ import Greeting from './greeting';
 import { logout } from '../../actions/session_actions';
 
 const mapStateToProps = (state) => {
+  let action;
+  if (state.login) {
+    action = state.login;
+  } else {
+    action = state.signup;
+  }
   return {
-    currentUser: state.session.currentUser
+    currentUser: action.currentUser
   };
 };
 

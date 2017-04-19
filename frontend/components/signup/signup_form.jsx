@@ -1,11 +1,13 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router';
 
-class SessionForm extends React.Component {
+class SignupForm extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
 			email: "",
+      fname: "",
+      lname: "",
 			password: ""
 		};
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -26,29 +28,34 @@ class SessionForm extends React.Component {
   }
 
   render() {
-    const address = this.props.formType === 'signup' ? '/signup' : '/login';
-    const action = this.props.formType === 'signup' ? 'users' : 'session';
+    const action = 'users';
     const errors = this.props.errors.map(err => <li>{err}</li>);
     return(
       <div>
         <ul>
           {errors}
         </ul>
-        <h2>{this.props.formType}</h2>
+        <h2>Sign Up</h2>
         <br/>
         <form onSubmit={this.handleSubmit}>
           <label>Email
             <input type="text" onChange={this.linkState('email')} value={this.state.email}/>
           </label>
-          <label>Password
+          <label>First Name
+            <input type="text" onChange={this.linkState('fname')} value={this.state.fname}/>
+          </label>
+          <label>Last Name
+            <input type="text" onChange={this.linkState('lname')} value={this.state.lname}/>
+          </label>
+          <label>Create a Password
             <input type="password" onChange={this.linkState('password')} value={this.state.password}/>
           </label>
-          <input type="submit" value="Submit"/>
+          <input type="submit" value="Sign Up"/>
         </form>
-        <Link to={address}>{address.slice(1)}</Link>
+        <Link to='/login'>Already have an account? Log In!</Link>
       </div>
     );
   }
 }
 
-export default withRouter(SessionForm);
+export default withRouter(SignupForm);

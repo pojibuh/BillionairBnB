@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router';
 
-class SessionForm extends React.Component {
+class LoginForm extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -26,15 +26,14 @@ class SessionForm extends React.Component {
   }
 
   render() {
-    const address = this.props.formType === 'signup' ? '/signup' : '/login';
-    const action = this.props.formType === 'signup' ? 'users' : 'session';
+    const action = 'session';
     const errors = this.props.errors.map(err => <li>{err}</li>);
     return(
       <div>
         <ul>
           {errors}
         </ul>
-        <h2>{this.props.formType}</h2>
+        <h2>Log In</h2>
         <br/>
         <form onSubmit={this.handleSubmit}>
           <label>Email
@@ -43,12 +42,12 @@ class SessionForm extends React.Component {
           <label>Password
             <input type="password" onChange={this.linkState('password')} value={this.state.password}/>
           </label>
-          <input type="submit" value="Submit"/>
+          <input type="submit" value="Log In"/>
         </form>
-        <Link to={address}>{address.slice(1)}</Link>
+        <Link to='/signup'>Don't have an account? Sign Up!</Link>
       </div>
     );
   }
 }
 
-export default withRouter(SessionForm);
+export default withRouter(LoginForm);

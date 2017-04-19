@@ -5,7 +5,7 @@ const initialState = {
     errors: []
 };
 
-export default function ModalReducer(state = initialState, action) {
+export default function LoginReducer(state = initialState, action) {
   Object.freeze(state);
   let newState;
   switch(action.type){
