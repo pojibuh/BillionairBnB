@@ -26,6 +26,8 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'rails_12factor'
 
+gem 'validates_email_format_of'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 

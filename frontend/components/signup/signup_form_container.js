@@ -4,8 +4,8 @@ import { signup } from '../../actions/session_actions';
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    loggedIn: !!state.signup.currentUser,
-    errors: state.signup.errors,
+    loggedIn: !!state.session.currentUser,
+    errors: state.session.errors,
     formType: 'signup'
   };
 };
