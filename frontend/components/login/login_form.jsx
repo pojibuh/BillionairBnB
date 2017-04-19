@@ -26,8 +26,8 @@ class LoginForm extends React.Component {
   }
 
   renderErrors() {
-    if (this.props.errors) {
-      const errors = this.props.errors.map(err => <li>{err}</li>);
+    if (this.props.errors.errors) {
+      const errors = this.props.errors.errors.map(err => <li>{err}</li>);
       return errors;
     }
   }

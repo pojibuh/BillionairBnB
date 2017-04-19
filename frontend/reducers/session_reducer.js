@@ -16,8 +16,8 @@ export default function SessionReducer(state = initialState, action) {
       return newState;
     case RECEIVE_ERRORS:
       const errors = action.errors;
-      newState = Object.assign({}, state, { errors });
-      debugger
+      newState = Object.assign({}, state);
+      newState.errors = errors;
       return newState;
     default:
       return state;
