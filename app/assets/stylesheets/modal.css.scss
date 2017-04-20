@@ -34,6 +34,21 @@
   height: 100%;
 }
 
+.signup-divider {
+  width: 100%;
+  color: #DCDCDC;
+}
+
+.signup-errors {
+  color: red;
+}
+
+.signup-password-errors {
+  color: red;
+  padding-bottom: 7px;
+  list-style: none;
+}
+
 .login-submit, .signup-submit, .demo-login {
   width: 100%;
   background-color: #FF5A5F;
@@ -46,7 +61,6 @@
 
 .signup{
   border: 1px solid #C0C0C0;
-  border-radius: 4px;
   margin-top: 8px;
   margin-bottom: 8px;
 }
@@ -55,7 +69,6 @@
   border: 1px solid #C0C0C0;
   margin-top: 8px;
   margin-bottom: 8px;
-  border-radius: 4px;
 }
 
 .signup[type="text"] {

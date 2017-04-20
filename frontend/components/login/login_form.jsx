@@ -55,7 +55,7 @@ class LoginForm extends React.Component {
 
           <input className="login-submit" type="submit" value="Log In"/>
         </form>
-        <br/>
+        <hr className="signup-divider"/>
         <div className="switch-to-signup">
           <p>Don't have an account?</p>
           <button className="switch" onClick={() => this.props.activate('signup')}>Sign Up</button>
