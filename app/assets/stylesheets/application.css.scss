@@ -16,7 +16,7 @@
  @import 'modal';
 
  body{
-  font-family: 'Lato', sans-serif;
+  font-family: sans-serif;
  }
 
  .login-errors {
@@ -47,7 +47,7 @@
 }
 
 .navbar-right {
-  width: 140px;
+  width: 150px;
   padding: 20px;;
   display: flex;
   flex-direction: row;
@@ -64,13 +64,13 @@
   padding: none;
   font-size: 14px;
   font-weight: 450;
-  border-bottom: 2px white;
 }
 
 .navbar-right-hover {
   height: 100%;
   padding: none;
   margin-bottom: 3px;
+  border-bottom: 2px solid transparent;
 }
 
 .navbar-right button:focus {
@@ -80,4 +80,43 @@
 .navbar-right-hover:hover {
   border-bottom: 2px solid #4A4A4A;
   cursor: pointer;
+  margin-bottom: 3px;
+}
+
+.greeting-1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 150px;
+}
+
+.greeting-2 {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.greeting-3 {
+  width: 60%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+
+.greeting-text-1 {
+  color: #FF5A5F;
+  font-size: 46px;
+  font-weight: 600;
+}
+
+.greeting-text-2 {
+  color: #4A4A4A;
+  font-size: 46px;
+  font-weight: 200;
 }

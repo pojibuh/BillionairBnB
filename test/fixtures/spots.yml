@@ -1,0 +1,35 @@
+# == Schema Information
+#
+# Table name: spots
+#
+#  id          :integer          not null, primary key
+#  lat         :float            not null
+#  lng         :float            not null
+#  owner_id    :integer          not null
+#  price       :integer          not null
+#  location    :string           not null
+#  image_url   :string           not null
+#  description :text             not null
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  lat: 1.5
+  lng: 1.5
+  owner_id: 1
+  price: 1
+  location: MyString
+  image_url: MyString
+  description: MyText
+
+two:
+  lat: 1.5
+  lng: 1.5
+  owner_id: 1
+  price: 1
+  location: MyString
+  image_url: MyString
+  description: MyText

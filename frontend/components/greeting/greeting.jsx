@@ -18,10 +18,21 @@ class Greeting extends React.Component {
       );
     } else {
       return (
-        <div></div>
+        <div className="greeting-1">
+          <div className="greeting-2">
+            <div className="greeting-3">
+              <h1 className="greeting-text-1">Where next?</h1>
+              <h1 className="greeting-text-2">Live the good life with BillionairBnB</h1>
+            </div>
+          </div>
+        </div>
       );
     }
   }
 }
+
+// <label className="greeting-text-1">
+//   Where next?<h1 className="greeting-text-2"> Live the good life with BillionairBnB</h1>
+// </label>
 
 export default Greeting;
