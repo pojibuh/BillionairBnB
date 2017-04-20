@@ -31,8 +31,8 @@ class SignupForm extends React.Component {
     let emailErrors = "";
     if (this.props.errors.email) {
       emailErrors = this.props.errors.email;
-      emailErrors = emailErrors.map(err => {
-        return (<li>{`Email ${err}`}</li>);
+      emailErrors = emailErrors.map((err, idx) => {
+        return (<li key={idx}>{`Email ${err}`}</li>);
       });
     }
     return emailErrors;
@@ -42,8 +42,8 @@ class SignupForm extends React.Component {
     let fnameErrors = '';
     if (this.props.errors.fname) {
       fnameErrors = this.props.errors.fname;
-      fnameErrors = fnameErrors.map(err => {
-        return (<li>{`First Name ${err}`}</li>);
+      fnameErrors = fnameErrors.map((err, idx) => {
+        return (<li key={idx}>{`First Name ${err}`}</li>);
       });
     }
     return fnameErrors;
@@ -53,8 +53,8 @@ class SignupForm extends React.Component {
     let lnameErrors = '';
     if (this.props.errors.lname) {
       lnameErrors = this.props.errors.lname;
-      lnameErrors = lnameErrors.map(err => {
-        return (<li>{`Last Name ${err}`}</li>);
+      lnameErrors = lnameErrors.map((err, idx) => {
+        return (<li key={idx}>{`Last Name ${err}`}</li>);
       });
     }
     return lnameErrors;
@@ -64,8 +64,8 @@ class SignupForm extends React.Component {
     let passwordErrors = '';
     if (this.props.errors.password) {
       passwordErrors = this.props.errors.password;
-      passwordErrors = passwordErrors.map(err => {
-        return (<li>{`Password ${err}`}</li>);
+      passwordErrors = passwordErrors.map((err, idx) => {
+        return (<li key={idx}>{`Password ${err}`}</li>);
       });
     }
     return passwordErrors;
