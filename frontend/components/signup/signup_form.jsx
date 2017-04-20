@@ -24,8 +24,8 @@ class SignupForm extends React.Component {
   }
 
   renderErrors() {
-    if (this.props.errors.errors) {
-      const errors = this.props.errors.errors.map(err => <li>{err}</li>);
+    if (this.props.errors) {
+      const errors = this.props.errors.map(err => <li>{err}</li>);
       return errors;
     }
   }
@@ -37,31 +37,31 @@ class SignupForm extends React.Component {
   render() {
     const action = 'users';
     return(
-      <div>
-        <ul>
+      <div className="signup-main">
+        <ul className="signup-errors">
           { this.renderErrors() }
         </ul>
-        <h2>Sign Up</h2>
-        <br/>
-        <form className="signup" onSubmit={this.handleSubmit}>
+        <form className="signup-form" onSubmit={this.handleSubmit}>
           <label>
-            <input type="text" onChange={this.linkState('email')} value={this.state.email} placeholder='Email'/>
+            <input className="signup" type="text" onChange={this.linkState('email')} value={this.state.email} placeholder='Email Address'/>
           </label>
-
+          
           <label>
-            <input type="text" onChange={this.linkState('fname')} value={this.state.fname} placeholder='First Name'/>
+            <input className="signup" type="text" onChange={this.linkState('fname')} value={this.state.fname} placeholder='First Name'/>
           </label>
-
+          
           <label>
-            <input type="text" onChange={this.linkState('lname')} value={this.state.lname} placeholder='Last Name'/>
+            <input className="signup" type="text" onChange={this.linkState('lname')} value={this.state.lname} placeholder='Last Name'/>
           </label>
-
+          
           <label>
-            <input type="password" onChange={this.linkState('password')} value={this.state.password} placeholder='Create a Password'/>
+            <input className="signup" type="password" onChange={this.linkState('password')} value={this.state.password} placeholder='Create a Password'/>
           </label>
-          <input type="submit" value="Sign Up"/>
+          
+          <input className="signup-submit" type="submit" value="Sign Up"/>
         </form>
-        <button onClick={() => this.props.activate('login')}>Already have an account? Log In!</button>
+        <br/>
+        <button className="switch-to-login" onClick={() => this.props.activate('login')}>Already have a BillionairBnB account? Log In</button>
       </div>
     );
   }

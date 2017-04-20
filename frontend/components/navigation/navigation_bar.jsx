@@ -16,10 +16,18 @@ class NavigationBar extends React.Component {
         </div>
         <div className="navbar-right">
           <div className="signup">
-            <button onClick={() => this.props.activateModal('signup')}>Sign Up</button>
+            <button onClick={() => this.props.activateModal('signup')}>
+              <div className="navbar-right-hover">
+                Sign Up
+              </div>
+            </button>
           </div>
           <div className="login">
-            <button onClick={() => this.props.activateModal('login')}>Log In</button>
+            <button onClick={() => this.props.activateModal('login')}>
+              <div className="navbar-right-hover">
+                Log In
+              </div>
+            </button>
           </div>
         </div>
       </nav>

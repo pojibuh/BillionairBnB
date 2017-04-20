@@ -22,8 +22,8 @@ class LoginForm extends React.Component {
   }
 
   renderErrors() {
-    if (this.props.errors.errors) {
-      const errors = this.props.errors.errors.map(err => <li>{err}</li>);
+    if (this.props.errors) {
+      const errors = this.props.errors.map(err => <li>{err}</li>);
       return errors;
     }
   }
@@ -35,22 +35,24 @@ class LoginForm extends React.Component {
   render() {
     const action = 'session';
     return(
-      <div>
-        <ul>
+      <div className="login-main">
+        <ul className="login-errors">
           { this.renderErrors() }
         </ul>
-        <h2>Log In</h2>
         <br/>
-        <form className="login" onSubmit={this.handleSubmit}>
+        <form className="login-form" onSubmit={this.handleSubmit}>
           <label>
-            <input type="text" onChange={this.linkState('email')} value={this.state.email} placeholder='Email'/>
+            <input className="login" type="text" onChange={this.linkState('email')} value={this.state.email} placeholder='Email'/>
           </label>
+          
           <label>
-            <input type="password" onChange={this.linkState('password')} value={this.state.password} placeholder='Password'/>
+            <input className="login" type="password" onChange={this.linkState('password')} value={this.state.password} placeholder='Password'/>
           </label>
-          <input type="submit" value="Log In"/>
+          
+          <input className="login-submit" type="submit" value="Log In"/>
         </form>
-        <button onClick={() => this.props.activate('signup')}>Don't have an account? Sign Up!</button>
+        <br/>
+        <button className="switch-to-signup" onClick={() => this.props.activate('signup')}>Don't have an account? Sign Up</button>
       </div>
     );
   }
