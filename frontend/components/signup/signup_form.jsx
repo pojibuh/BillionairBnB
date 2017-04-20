@@ -10,6 +10,12 @@ class SignupForm extends React.Component {
       lname: "",
 			password: ""
 		};
+    this.errors = {
+      email: "",
+      fname: "",
+      lname: "",
+			password: ""
+    };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -23,41 +29,34 @@ class SignupForm extends React.Component {
     return (event => this.setState({[key]: event.currentTarget.value}));
   }
 
-  renderErrors() {
-    if (this.props.errors) {
-      const errors = this.props.errors.map(err => <li>{err}</li>);
-      return errors;
-    }
-  }
-
   componentDidMount() {
     this.props.clear();
   }
+  
+  filterErrors() {
+    Object.assign(this.errors, this.props.errors);
+  }
 
   render() {
-    const action = 'users';
     return(
       <div className="signup-main">
-        <ul className="signup-errors">
-          { this.renderErrors() }
-        </ul>
         <form className="signup-form" onSubmit={this.handleSubmit}>
           <label>
             <input className="signup" type="text" onChange={this.linkState('email')} value={this.state.email} placeholder='Email Address'/>
           </label>
-
+          { this.errors.email }
           <label>
             <input className="signup" type="text" onChange={this.linkState('fname')} value={this.state.fname} placeholder='First Name'/>
           </label>
-
+          { this.errors.fname }
           <label>
             <input className="signup" type="text" onChange={this.linkState('lname')} value={this.state.lname} placeholder='Last Name'/>
           </label>
-
+          { this.errors.lname }
           <label>
             <input className="signup" type="password" onChange={this.linkState('password')} value={this.state.password} placeholder='Create a Password'/>
           </label>
-
+          { this.errors.password }
           <input className="signup-submit" type="submit" value="Sign Up"/>
         </form>
         <br/>

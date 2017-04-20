@@ -23,7 +23,7 @@ class LoginForm extends React.Component {
 
   renderErrors() {
     if (this.props.errors) {
-      const errors = this.props.errors.map(err => <li>{err}</li>);
+      const errors = this.props.errors[0];
       return errors;
     }
   }
@@ -33,13 +33,17 @@ class LoginForm extends React.Component {
   }
 
   render() {
-    const action = 'session';
     return(
       <div className="login-main">
         <ul className="login-errors">
           { this.renderErrors() }
         </ul>
         <br/>
+        <button
+          className="demo-login"
+          onClick={() => this.props.processForm({email: 'moktar@jama.com', password: 'password'}).then(this.props.deactivate('login'))}>
+          Demo Login
+        </button>
         <form className="login-form" onSubmit={this.handleSubmit}>
           <label>
             <input className="login" type="text" onChange={this.linkState('email')} value={this.state.email} placeholder='Email'/>
