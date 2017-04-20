@@ -15,14 +15,14 @@ class NavigationBar extends React.Component {
           <a href='/#/'>BillionairBnB</a>
         </div>
         <div className="navbar-right">
-          <div className="signup">
+          <div className="signup-button">
             <button onClick={() => this.props.activateModal('signup')}>
               <div className="navbar-right-hover">
                 Sign Up
               </div>
             </button>
           </div>
-          <div className="login">
+          <div className="login-button">
             <button onClick={() => this.props.activateModal('login')}>
               <div className="navbar-right-hover">
                 Log In

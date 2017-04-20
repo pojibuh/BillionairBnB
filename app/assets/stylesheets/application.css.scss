@@ -41,7 +41,7 @@
 }
 
 .navbar-left a {
-  color: #f16664;
+  color: #FF5A5F;
   text-decoration: none;
   font-size: 25px;
 }
@@ -70,7 +70,7 @@
 .navbar-right-hover {
   height: 100%;
   padding: none;
-  margin-bottom: 4px;
+  margin-bottom: 3px;
 }
 
 .navbar-right button:focus {
@@ -78,6 +78,6 @@
 }
 
 .navbar-right-hover:hover {
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid #4A4A4A;
   cursor: pointer;
 }

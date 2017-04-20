@@ -44,15 +44,18 @@ class LoginForm extends React.Component {
           <label>
             <input className="login" type="text" onChange={this.linkState('email')} value={this.state.email} placeholder='Email'/>
           </label>
-          
+
           <label>
             <input className="login" type="password" onChange={this.linkState('password')} value={this.state.password} placeholder='Password'/>
           </label>
-          
+
           <input className="login-submit" type="submit" value="Log In"/>
         </form>
         <br/>
-        <button className="switch-to-signup" onClick={() => this.props.activate('signup')}>Don't have an account? Sign Up</button>
+        <div className="switch-to-signup">
+          <p>Don't have an account?</p>
+          <button className="switch" onClick={() => this.props.activate('signup')}>Sign Up</button>
+        </div>
       </div>
     );
   }

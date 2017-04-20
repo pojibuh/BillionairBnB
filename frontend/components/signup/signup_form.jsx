@@ -45,23 +45,26 @@ class SignupForm extends React.Component {
           <label>
             <input className="signup" type="text" onChange={this.linkState('email')} value={this.state.email} placeholder='Email Address'/>
           </label>
-          
+
           <label>
             <input className="signup" type="text" onChange={this.linkState('fname')} value={this.state.fname} placeholder='First Name'/>
           </label>
-          
+
           <label>
             <input className="signup" type="text" onChange={this.linkState('lname')} value={this.state.lname} placeholder='Last Name'/>
           </label>
-          
+
           <label>
             <input className="signup" type="password" onChange={this.linkState('password')} value={this.state.password} placeholder='Create a Password'/>
           </label>
-          
+
           <input className="signup-submit" type="submit" value="Sign Up"/>
         </form>
         <br/>
-        <button className="switch-to-login" onClick={() => this.props.activate('login')}>Already have a BillionairBnB account? Log In</button>
+        <div className="switch-to-login">
+          <p>Already have a BillionairBnB account?</p>
+          <button className="switch" onClick={() => this.props.activate('login')}>Log In</button>
+        </div>
       </div>
     );
   }

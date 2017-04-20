@@ -7,4 +7,5 @@ html, body, section, article, h1, h2, p, button, input, div, ul, form, li {
   text-decoration: inherit;
   color: inherit;
   background: transparent;
+  outline: none;
 }
