@@ -14,27 +14,35 @@ class SpotIndex extends React.Component {
 
   render() {
     const spots = Object.values(this.props.spots);
-    const SpotIndexItems = spots.map((spot, idx) => {
-      return <SpotIndexItem spot={spot} key={idx}/>;
-    });
     const settings = {
-      infinite: true,
+      infinite: false,
       speed: 500,
-      slidesToShow: 1,
+      slidesToShow: 3,
       slidesToScroll: 1,
       arrows: true,
       draggable: false
     };
-    return (
-      <div className="outer-carousel">
-        <Slider {...settings}>
-          <div>
-            { SpotIndexItems }
-          </div>
-        </Slider>
-      </div>
-    );
+    if (spots.length > 0) {
+      return (
+        <div className="outer-carousel">
+          <Slider {...settings} >
+              {spots.map((spot, idx) => {
+                return <div><SpotIndexItem spot={spot} key={idx}/></div>;
+              })
+            }
+          </Slider>
+        </div>
+      );
+    } else {
+      return (
+        <div></div>
+      );
+    }
   }
 }
 
 export default SpotIndex;
+
+// const SpotIndexItems = spots.map((spot, idx) => {
+//   return <div><SpotIndexItem spot={spot} key={idx}/></div>;
+// });
