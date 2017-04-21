@@ -10,11 +10,11 @@ class SpotIndexItem extends React.Component {
     const spot = this.props.spot;
     return(
       <figure className="spot-item">
-        <div>
+        <div className="spot-img">
           <img src={spot.image_url}/>
         </div>
-        <div className="spot-item" >
-          <span key={spot.id}>{spot.description}</span>
+        <div className="spot-info" >
+          <span key={spot.id} className="description">{spot.description}</span>
           <span key={(spot.id + 1)}>{`$${spot.price}`}</span>
         </div>
       </figure>
