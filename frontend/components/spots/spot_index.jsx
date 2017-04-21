@@ -25,12 +25,14 @@ class SpotIndex extends React.Component {
     if (spots.length > 0) {
       return (
         <div className="outer-carousel">
-          <Slider {...settings} >
-              {spots.map((spot, idx) => {
-                return <div><SpotIndexItem spot={spot} key={idx}/></div>;
-              })
-            }
-          </Slider>
+          <div className="inner-carousel">
+            <Slider {...settings} >
+                {spots.map((spot, idx) => {
+                  return <div><SpotIndexItem spot={spot} key={idx}/></div>;
+                })
+              }
+            </Slider>
+          </div>
         </div>
       );
     } else {

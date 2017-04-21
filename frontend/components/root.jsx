@@ -14,8 +14,7 @@ const Root = ({ store }) => {
     <Provider store={ store }>
       <Router history={ hashHistory }>
         <Route path='/' component={ App }>
-          <Route path='/signup' component={ ModalContainer } onEnter={ redirectIfLoggedIn } />
-          <Route path='/login' component={ ModalContainer } onEnter={ redirectIfLoggedIn } />
+          <Route path='/spots' component={ ModalContainer } onEnter={ redirectIfLoggedIn } />
         </Route>
       </Router>
     </Provider>
