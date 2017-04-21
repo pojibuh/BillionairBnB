@@ -1,28 +1,13 @@
 .outer-carousel {
   width: 100%;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: flex-start;
 }
 
-.shift-left, .shift-right {
-  align-self: center;
-}
-
-.left-button {
-  background: none;
-  transform: rotate(90deg);
-  width: 24px;
-  height: 24px;
-  padding-top: 10px;
-}
-
-.right-button {
-  background: none;
-  transform: rotate(270deg);
-  width: 24px;
-  height: 24px;
-  padding-top: 10px;
+.slick-list {
+  width: 500px;
 }
 
 .carousel {
@@ -40,16 +25,6 @@
 .carousel > figure {
   display: block;
   width: 100%;
-}
-
-.carousel ul {
-  position: relative;
-  left: 0;
-  transition: left 300ms;
-}
-.carousel li {
-  float: left;
-  width: 500px;
 }
 
 .spot-item {
