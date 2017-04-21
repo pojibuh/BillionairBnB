@@ -10,9 +10,9 @@
 .inner-carousel {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  width: 58%;
+  width: 70%;
 }
 
 .slick-list {
@@ -28,7 +28,10 @@
   padding-left: 6px;
   padding-right: 6px;
   width: 350px;
-  height: 250px;
+  height: 255px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .spot-item img {
@@ -38,7 +41,18 @@
 }
 
 .description {
+  font-size: 15px;
+  font-family: sans-serif;
+  color: #4A4A4A;
+  font-weight: 600;
+}
+
+.price {
+  font-size: 15px;
   padding-right: 5px;
+  font-family: sans-serif;
+  color: #4A4A4A;
+  font-weight: 600;
 }
 
 .slick-disabled {

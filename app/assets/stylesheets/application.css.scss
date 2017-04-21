@@ -55,7 +55,7 @@
 
 .navbar-right {
   width: 150px;
-  padding: 20px;;
+  padding: 18px 12px 18px 14px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -100,7 +100,8 @@
 }
 
 .greeting-2 {
-  width: 58%;
+  width: 56%;
+  min-width: 660px;
   height: 100%;
   display: flex;
   flex-direction: row;
