@@ -28,7 +28,7 @@ class SpotIndex extends React.Component {
           <div className="inner-carousel">
             <Slider {...settings} >
                 {spots.map((spot, idx) => {
-                  return <div><SpotIndexItem spot={spot} key={idx}/></div>;
+                  return <div key={idx}><SpotIndexItem spot={spot} key={idx}/></div>;
                 })
               }
             </Slider>

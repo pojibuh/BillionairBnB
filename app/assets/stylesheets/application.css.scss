@@ -15,10 +15,16 @@
  @import 'modal';
  @import 'css_reset';
  @import 'spots';
+ @import 'search';
 
  body{
   font-family: sans-serif;
  }
+
+ #map-container {
+  width: 765px;
+  height: 850px;
+}
 
  .login-errors {
    list-style: none;
