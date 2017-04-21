@@ -42,7 +42,3 @@ class SpotIndex extends React.Component {
 }
 
 export default SpotIndex;
-
-// const SpotIndexItems = spots.map((spot, idx) => {
-//   return <div><SpotIndexItem spot={spot} key={idx}/></div>;
-// });
