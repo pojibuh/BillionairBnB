@@ -14,9 +14,9 @@ class SpotIndex extends React.Component {
       return <SpotIndexItem spot={spot}/>;
     });
     return (
-      <ul>
+      <div className="carousel">
         { SpotIndexItems }
-      </ul>
+      </div>
     );
   }
 }

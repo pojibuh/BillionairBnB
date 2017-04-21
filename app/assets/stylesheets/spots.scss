@@ -1,3 +1,28 @@
-.spot-list {
+.carousel {
   display: block;
+    position: relative;
+    margin: auto;
+    width: 1080px;
+    height: 400px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.carousel > figure {
+    width: 100%;
+}
+
+.carousel ul {
+  position: relative;
+  left: 0;
+  transition: left 300ms;
+}
+.carousel li {
+  float: left;
+  width: 500px;
+}
+
+.spot-item img {
+  width: 350px;
+  height: 230px;
 }

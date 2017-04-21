@@ -1,11 +1,14 @@
-html, body, section, article, h1, h2, p, button, input, div, ul, form, li {
+html, body, section, article, h1, h2, p, button, input, div, ul, form, li, figure,
+img {
   margin: 0;
   border: 0;
   padding: 0;
   font: inherit;
   text-align: inherit;
+  vertical-align: inherit;
   text-decoration: inherit;
   color: inherit;
   background: transparent;
   outline: none;
+  list-style: none;
 }

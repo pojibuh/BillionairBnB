@@ -9,15 +9,15 @@ class SpotIndexItem extends React.Component {
   render() {
     const spot = this.props.spot;
     return(
-      <section className="spot-item">
-        <figure>
+      <figure className="spot-item">
+        <div>
           <img src={spot.image_url}/>
-        </figure>
-        <ul>
-          <li key={spot.id}>{spot.description}</li>
-          <li key={(spot.id + 1)}>{spot.price}</li>
-        </ul>
-      </section>
+        </div>
+        <div className="spot-item" >
+          <span key={spot.id}>{spot.description}</span>
+          <span key={(spot.id + 1)}>{`$${spot.price}`}</span>
+        </div>
+      </figure>
     );
   }
 }
