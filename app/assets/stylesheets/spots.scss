@@ -43,7 +43,7 @@
 .description {
   font-size: 15px;
   font-family: sans-serif;
-  color: #4A4A4A;
+  color: #484848;
   font-weight: 600;
 }
 
@@ -51,7 +51,7 @@
   font-size: 15px;
   padding-right: 5px;
   font-family: sans-serif;
-  color: #4A4A4A;
+  color: #484848;
   font-weight: 600;
 }
 
@@ -59,14 +59,29 @@
   visibility: hidden;
 }
 
-.slick-arrow {
-  background-color: #4A4A4A;
+.slick-prev {
+  transform: rotateZ(180deg);
+  padding-left: 6px;
 }
 
-.slick-arrow:hover {
-  background-color: #4A4A4A;
+.slick-next {
+  padding-left: 6px;
 }
 
-.slick-arrow:focus {
-  background-color: #4A4A4A;
+.slick-arrow, .slick-prev, .slick-next {
+  color: transparent;
+  width: 24px;
+  height: 24px;
+}
+
+.slick-prev:before {
+  content: url('Logomakr_0uzDga.png');
+  background-size: 20px 20px;
+  zoom: 10%;
+}
+
+.slick-next:before {
+  content: url('Logomakr_0uzDga.png');
+  background-size: 20px 20px;
+  zoom: 10%;
 }

@@ -6,7 +6,6 @@ import SearchContainer from './search/search_container';
 import App from './app';
 
 const Root = ({ store }) => {
-
   return (
     <Provider store={ store }>
       <Router history={ hashHistory }>
