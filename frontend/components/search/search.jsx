@@ -12,7 +12,7 @@ class Search extends React.Component {
   render() {
     return(
       <div>
-        <NavigationBar />
+        <NavigationBar/>
         <div className="search-page">
           <Map spots={this.props.spots}/>
           <SpotIndex spots={this.props.spots}/>
