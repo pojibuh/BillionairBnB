@@ -28,6 +28,8 @@ gem 'rails_12factor'
 
 gem 'validates_email_format_of'
 
+gem 'figaro'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
