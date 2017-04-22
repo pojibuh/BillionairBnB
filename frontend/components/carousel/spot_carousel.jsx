@@ -1,5 +1,6 @@
 import React from 'react';
 import Slider from 'react-slick';
+import { Link } from 'react-router';
 import SpotIndexItem from '../spots/spot_index_item';
 
 class SpotCarousel extends React.Component {
@@ -25,6 +26,14 @@ class SpotCarousel extends React.Component {
     if (spots.length > 0) {
       return (
         <div className="outer-carousel">
+          <div className="carousel-header">
+            <div className="carousel-header-title">
+              Homes
+            </div>
+            <div className="searchlink">
+              <Link to='/spots' className="spots-link">See All</Link>
+            </div>
+          </div>
           <div className="inner-carousel">
             <Slider {...settings} >
                 {spots.map((spot, idx) => {

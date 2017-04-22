@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import SpotIndex from '../spots/spot_index';
+import SpotCarousel from './spot_carousel';
 import { fetchSpots } from '../../actions/spot_actions';
 
 const mapStateToProps = (state) => {
@@ -17,4 +17,4 @@ const mapDispatchToProps = (dispatch) => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(SpotIndex);
+)(SpotCarousel);

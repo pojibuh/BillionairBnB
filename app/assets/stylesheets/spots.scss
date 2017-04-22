@@ -1,9 +1,18 @@
 .outer-carousel {
   width: 100%;
-  height: 400px;
+  height: 480px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-header {
+  height: 80px;
+  width: 55.5%;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -13,6 +22,27 @@
   justify-content: center;
   align-items: center;
   width: 70%;
+}
+
+.searchlink {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.spots-link {
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  outline: none;
+  color: #484848;
+}
+
+.carousel-header-title {
+  font-size: 26px;
+  color: #484848;
+  font-weight: 600;
 }
 
 .slick-list {
