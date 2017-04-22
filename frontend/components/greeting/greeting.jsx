@@ -8,27 +8,17 @@ class Greeting extends React.Component {
   }
 
   render() {
-    const user = this.props.currentUser;
-    if (user) {
-      return (
-        <div>
-          <h2>Hey, {`${user.fname} ${user.lname}`}!</h2>
-          <button onClick={this.props.logout}>Log Out</button>
-        </div>
-      );
-    } else {
-      return (
-        <div className="greeting-1">
-          <div className="greeting-2">
-            <div className="greeting-3">
-              <h1 className="greeting-text-1">Where next?</h1>&nbsp;
-              <h1 className="greeting-text-2">Live the good life</h1>
-              <h1 className="greeting-text-2">with BillionairBnB</h1>
-            </div>
+    return (
+      <div className="greeting-1">
+        <div className="greeting-2">
+          <div className="greeting-3">
+            <h1 className="greeting-text-1">Where next?</h1>&nbsp;
+            <h1 className="greeting-text-2">Live the good life</h1>
+            <h1 className="greeting-text-2">with BillionairBnB</h1>
           </div>
         </div>
-      );
-    }
+      </div>
+    );
   }
 }
 

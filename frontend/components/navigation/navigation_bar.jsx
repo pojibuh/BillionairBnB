@@ -7,31 +7,53 @@ class NavigationBar extends React.Component {
     super(props);
   }
 
-  //refactor this later so that when the user is logged in, it shows prof pic
   render() {
-    return (
-      <nav className="navbar">
-        <div className="navbar-left">
-          <a href='/#/' id="logo"></a>
-        </div>
-        <div className="navbar-right">
-          <div className="signup-button">
-            <button onClick={() => this.props.activateModal('signup')}>
-              <div className="navbar-right-hover">
-                Sign Up
-              </div>
-            </button>
+    const user = this.props.currentUser;
+    if (user) {
+      return (
+        <nav className="navbar">
+          <div className="navbar-left">
+            <a href='/#/' id="logo"></a>
           </div>
-          <div className="login-button">
-            <button onClick={() => this.props.activateModal('login')}>
-              <div className="navbar-right-hover">
-                Log In
-              </div>
-            </button>
+          <div className="navbar-right-logged-in">
+            <div className="user-greeting">
+              <p>Hey, {user.fname} {user.lname}</p>
+            </div>
+            <div className="logout-button">
+              <button onClick={() => this.props.logout()}>
+                <div className="navbar-right-hover">
+                  Log Out
+                </div>
+              </button>
+            </div>
           </div>
-        </div>
-      </nav>
-    );
+        </nav>
+      );
+    } else {
+      return (
+        <nav className="navbar">
+          <div className="navbar-left">
+            <a href='/#/' id="logo"></a>
+          </div>
+          <div className="navbar-right-logged-out">
+            <div className="signup-button">
+              <button onClick={() => this.props.activateModal('signup')}>
+                <div className="navbar-right-hover">
+                  Sign Up
+                </div>
+              </button>
+            </div>
+            <div className="login-button">
+              <button onClick={() => this.props.activateModal('login')}>
+                <div className="navbar-right-hover">
+                  Log In
+                </div>
+              </button>
+            </div>
+          </div>
+        </nav>
+      );
+    }
   }
 }
 
