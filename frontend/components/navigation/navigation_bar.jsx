@@ -12,7 +12,7 @@ class NavigationBar extends React.Component {
     return (
       <nav className="navbar">
         <div className="navbar-left">
-          <a href='/#/'>BillionairBnB</a>
+          <a href='/#/' id="logo"></a>
         </div>
         <div className="navbar-right">
           <div className="signup-button">
