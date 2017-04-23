@@ -4,20 +4,22 @@ export default class MarkerManager {
     this.markers = {};
   }
 
-  updateMarkers(benches) {
-    console.log('time to update');
-    benches.forEach((spot) => {
-      createMarkerFromSpot(spot);
-    });
+  updateMarkers(spots) {
+    let spotList = Object.values(spots);
+    if (spotList.length > 0) {
+      spotList.forEach((spot) => {
+        this.createMarkerFromSpot(spot);
+      });
+    }
   }
 
-  createMarkerFromBench(spot) {
+  createMarkerFromSpot(spot) {
     let marker = new google.maps.Marker({
       position: {lat: spot.lat, lng: spot.lng},
       map: this.map,
-      title: 'Bench Marker'
+      spotId: spot.id
     });
-    this.markers[spot.id] = marker;
+    this.markers[marker.spotId] = marker;
     marker.setMap(this.map);
   }
 }

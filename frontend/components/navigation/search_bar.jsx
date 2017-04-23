@@ -11,10 +11,6 @@ class SearchBar extends React.Component {
     };
   }
 
-  handleSubmit(e) {
-    e.preventDefault();
-  }
-
   render() {
     return(
         <div className="search-bar">

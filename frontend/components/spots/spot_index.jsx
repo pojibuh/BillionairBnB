@@ -8,10 +8,6 @@ class SpotIndex extends React.Component {
     super(props);
   }
 
-  componentDidMount() {
-    this.props.fetchSpots();
-  }
-
   render() {
     const spots = Object.values(this.props.spots);
     let allSpots = spots.map((spot, idx) => {

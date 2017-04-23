@@ -12,7 +12,7 @@ class Search extends React.Component {
     return(
       <div>
         <div className="search-page">
-          <Map spots={this.props.spots}/>
+          <Map spots={this.props.spots} updateBounds={this.props.updateBounds}/>
           <div className="search-spots">
             <SpotIndex spots={this.props.spots}/>
           </div>

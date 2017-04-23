@@ -7,6 +7,8 @@
 
 .search-spots {
   width: 60%;
+  height: 915px;
+  overflow: auto;
 }
 
 .all-spots {
@@ -71,10 +73,6 @@
   flex-direction: row;
   align-items: center;
   transition: border-color 0.5s;
-}
-
-.DateRangePicker {
-  background: transparent;
 }
 
 .where:focus {
