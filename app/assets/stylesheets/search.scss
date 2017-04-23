@@ -23,7 +23,7 @@
 }
 
 .search-bar {
-  width: 572px;
+  width: 500px;
   height: 44px;
 }
 
@@ -35,6 +35,7 @@
 }
 
 .where {
+  width: 33%;
   border-top: 1px solid #DCDCDC;
   border-left: 1px solid #DCDCDC;
   border-bottom: 1px solid #DCDCDC;
@@ -44,10 +45,11 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  transition: width .5s;
+  transition: width 0.3s, border-color 0.5s;
 }
 
 .when {
+  width: 33%;
   border-top: 1px solid #DCDCDC;
   border-left: 1px solid #DCDCDC;
   border-bottom: 1px solid #DCDCDC;
@@ -55,14 +57,11 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-}
-
-.fa {
-  padding-left: 10px;
-  padding-right: 10px;
+  transition: width 0.3s, border-color 0.5s;
 }
 
 .how-many {
+  width: 33%;
   border: 1px solid #DCDCDC;
   box-shadow: 0 4px 2px -2px whitesmoke;
   border-top-right-radius: 4px;
@@ -70,8 +69,10 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  transition: width 0.3s, border-color 0.5s;
 }
 
-input[type=search]:focus {
-  border-bottom: 1px solid #008489;
+.where:focus, .when:focus, .how-many:focus {
+  width: 100%;
+  border-bottom: 2px solid #008984;
 }
