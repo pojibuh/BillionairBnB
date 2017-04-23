@@ -12,10 +12,22 @@
  *
  *= require_self
  */
+ @import 'CalendarDay';
+ @import 'CalendarMonth';
+ @import 'CalendarMonthGrid';
+ @import 'DayPicker';
+ @import 'DayPickerNavigation';
+ @import 'DayPickerKeyboardShortcuts';
+ @import 'DateInput';
+ @import 'DateRangePicker';
+ @import 'DateRangePickerInput';
+ @import 'SingleDatePicker';
+ @import 'SingleDatePickerInput';
  @import 'modal';
  @import 'css_reset';
  @import 'spots';
  @import 'search';
+ @import '_datepicker';
 
  body{
   font-family: sans-serif;
@@ -49,6 +61,7 @@
 .navbar-left {
   padding-left: 26px;
   padding-top: 14px;
+  margin-right: 5px;
 }
 
 .navbar-middle {

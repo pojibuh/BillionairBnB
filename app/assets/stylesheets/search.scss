@@ -23,11 +23,12 @@
 }
 
 .search-bar {
-  width: 500px;
+  width: 510px;
   height: 44px;
 }
 
 .search-query {
+  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: row;
@@ -69,10 +70,19 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  transition: width 0.3s, border-color 0.5s;
+  transition: border-color 0.5s;
 }
 
-.where:focus, .when:focus, .how-many:focus {
-  width: 100%;
+.where:focus {
+  width: 95%;
+  border-bottom: 2px solid #008984;
+}
+
+.when:focus {
+  width: 70%;
+  border-bottom: 2px solid #008984;
+}
+
+.how-many:focus {
   border-bottom: 2px solid #008984;
 }

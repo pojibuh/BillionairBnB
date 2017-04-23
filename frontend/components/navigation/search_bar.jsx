@@ -1,9 +1,14 @@
 import React from 'react';
+import { DateRangePicker, SingleDatePicker, DayPickerRangeController } from 'react-dates';
 
 class SearchBar extends React.Component {
 
   constructor(props) {
     super(props);
+    this.state = {
+      startDate: this.props.startDate,
+      endDate: this.props.endDate
+    };
   }
 
   handleSubmit(e) {
@@ -18,34 +23,18 @@ class SearchBar extends React.Component {
               className="where"
               type="text"
               placeholder="Anywhere"/>
-            <input className="when"/>
+              <DateRangePicker
+                startDate={this.state.startDate}
+                endDate={this.state.endDate}
+                onDatesChange={({ startDate, endDate }) => this.setState({ startDate, endDate })}
+                focusedInput={this.state.focusedInput}
+                onFocusChange={focusedInput => this.setState({ focusedInput })}
+            />
             <input className="how-many"/>
           </form>
         </div>
     );
   }
 }
-
-// return(
-//     <div className="search-bar">
-//       <form className="search-query">
-//         <div className="where fuckyourmom">
-//           <i className="fa fa-search" aria-hidden="true"></i>
-//           <input
-//             className="location"
-//             type="text"
-//             placeholder="Anywhere"/>
-//         </div>
-//         <div className="when">
-//           <i className="fa fa-calendar-o" aria-hidden="true"></i>
-//           <input />
-//         </div>
-//         <div className="how-many">
-//           <i className="fa fa-users" aria-hidden="true"></i>
-//           <input />
-//         </div>
-//       </form>
-//     </div>
-// );
 
 export default SearchBar;
