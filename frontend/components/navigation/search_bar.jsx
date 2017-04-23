@@ -15,18 +15,18 @@ class SearchBar extends React.Component {
         <div className="search-bar">
           <form className="search-query">
             <div className="where">
-              <i class="fa fa-search" aria-hidden="true"></i>
+              <i className="fa fa-search" aria-hidden="true"></i>
               <input
                 className="location"
-                type="text"
+                type="search"
                 placeholder="Anywhere"/>
             </div>
             <div className="when">
-              <i class="fa fa-calendar-o" aria-hidden="true"></i>
+              <i className="fa fa-calendar-o" aria-hidden="true"></i>
               <input />
             </div>
             <div className="how-many">
-              <i class="fa fa-users" aria-hidden="true"></i>
+              <i className="fa fa-users" aria-hidden="true"></i>
               <input />
             </div>
           </form>

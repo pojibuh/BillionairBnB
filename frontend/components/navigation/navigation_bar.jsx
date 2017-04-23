@@ -17,7 +17,9 @@ class NavigationBar extends React.Component {
             <a href='/#/' id="logo"></a>
           </div>
           <div className="navbar-middle">
-            <SearchBar />
+            <div className="search-bar-shift">
+              <SearchBar />
+            </div>
           </div>
           <div className="navbar-right-logged-in">
             <div className="user-greeting">
@@ -40,7 +42,9 @@ class NavigationBar extends React.Component {
             <a href='/#/' id="logo"></a>
           </div>
           <div className="navbar-middle">
-            <SearchBar />
+            <div className="search-bar-shift">
+              <SearchBar />
+            </div>
           </div>
           <div className="navbar-right-logged-out">
             <div className="signup-button">
