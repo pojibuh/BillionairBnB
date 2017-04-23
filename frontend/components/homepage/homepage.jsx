@@ -5,7 +5,7 @@ import SpotCarouselContainer from '../carousel/spot_carousel_container';
 class Homepage extends React.Component {
   render() {
     return (
-      <div>
+      <div className="homepage">
         <GreetingContainer />
         <SpotCarouselContainer />
       </div>

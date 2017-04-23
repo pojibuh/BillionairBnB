@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
+import SearchBar from './search_bar';
 
 class NavigationBar extends React.Component {
 
@@ -14,6 +15,9 @@ class NavigationBar extends React.Component {
         <nav className="navbar">
           <div className="navbar-left">
             <a href='/#/' id="logo"></a>
+          </div>
+          <div className="navbar-middle">
+            <SearchBar />
           </div>
           <div className="navbar-right-logged-in">
             <div className="user-greeting">
@@ -34,6 +38,9 @@ class NavigationBar extends React.Component {
         <nav className="navbar">
           <div className="navbar-left">
             <a href='/#/' id="logo"></a>
+          </div>
+          <div className="navbar-middle">
+            <SearchBar />
           </div>
           <div className="navbar-right-logged-out">
             <div className="signup-button">

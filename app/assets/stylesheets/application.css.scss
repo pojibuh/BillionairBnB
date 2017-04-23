@@ -43,12 +43,19 @@
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .navbar-left {
   padding-left: 26px;
+  padding-right: 26px;
   padding-top: 14px;
+}
+
+.navbar-middle {
+  width: 88%;
+  padding-top: 5px;
+  align-self: center;
 }
 
 .navbar-right-logged-out {
