@@ -73,6 +73,10 @@
   transition: border-color 0.5s;
 }
 
+.DateRangePicker {
+  background: transparent;
+}
+
 .where:focus {
   width: 95%;
   border-bottom: 2px solid #008984;

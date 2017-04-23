@@ -23,14 +23,16 @@ class SearchBar extends React.Component {
               className="where"
               type="text"
               placeholder="Anywhere"/>
-              <DateRangePicker
-                startDate={this.state.startDate}
-                endDate={this.state.endDate}
-                onDatesChange={({ startDate, endDate }) => this.setState({ startDate, endDate })}
-                focusedInput={this.state.focusedInput}
-                onFocusChange={focusedInput => this.setState({ focusedInput })}
-            />
-            <input className="how-many"/>
+              <button className="when">
+                <DateRangePicker
+                  startDate={this.state.startDate}
+                  endDate={this.state.endDate}
+                  onDatesChange={({ startDate, endDate }) => this.setState({ startDate, endDate })}
+                  focusedInput={this.state.focusedInput}
+                  onFocusChange={focusedInput => this.setState({ focusedInput })}
+                />
+              </button>
+            <input className="how-many" placeholder="# of Guests"/>
           </form>
         </div>
     );
