@@ -441,7 +441,7 @@
   background: #fff;
   position: relative;
   display: inline-block;
-  width: 130px;
+  width: 90px;
   vertical-align: middle; }
 
 .DateInput--with-caret::before,
@@ -571,8 +571,8 @@
 .DateRangePickerInput__arrow svg {
   vertical-align: middle;
   fill: #484848;
-  height: 24px;
-  width: 24px; }
+  height: 20px;
+  width: 20px; }
 
 .DateRangePickerInput__clear-dates {
   background: none;

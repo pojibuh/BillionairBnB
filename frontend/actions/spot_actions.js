@@ -9,7 +9,7 @@ export const receiveSpots = (spots) => {
   };
 };
 
-export const fetchSpots = () => dispatch => {
-  return SpotApiUtil.fetchSpots()
+export const fetchSpots = (filters) => dispatch => {
+  return SpotApiUtil.fetchSpots(filters)
     .then((spots) => dispatch(receiveSpots(spots)));
 };

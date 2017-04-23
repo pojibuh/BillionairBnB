@@ -1,17 +1,18 @@
-import { UPDATE_FILTER } from '../actions/filter_actions';
+import { UPDATE_BOUNDS } from '../actions/filter_actions';
+import merge from 'lodash/merge';
 
-const _defaultFilters = Object.freeze({
+const _defaultBounds = Object.freeze({
   bounds: {},
 });
 
-export default function FiltersReducer(state = _defaultFilters, action) {
+export default function FiltersReducer(state = _defaultBounds, action) {
   Object.freeze(state);
   switch(action.type) {
-    case UPDATE_FILTER:
-      const newFilter = {
-        [action.filter]: action.value
+    case UPDATE_BOUNDS:
+      const newBound = {
+        bounds: action.bounds
       };
-      return Object.assign({}, state, newFilter);
+      return merge({}, state, newBound);
     default:
       return state;
   }

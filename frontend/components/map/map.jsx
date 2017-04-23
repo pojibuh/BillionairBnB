@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import MarkerManager from '../../util/marker_manager';
 
 let mapOptions = {
@@ -6,21 +7,27 @@ let mapOptions = {
   zoom: 2
 };
 
-const getCoordinates = latLng => ({
-  lat: latLng.lat(),
-  lng: latLng.lng()
-});
-
 class Map extends React.Component {
 
   componentDidMount() {
     this.map = new google.maps.Map(this.mapNode, mapOptions);
     this.MarkerManager = new MarkerManager(this.map);
+    this.registerEventListeners();
     this.MarkerManager.updateMarkers(this.props.spots);
   }
 
   componentDidUpdate() {
     this.MarkerManager.updateMarkers(this.props.spots);
+  }
+
+  registerEventListeners() {
+    google.maps.event.addListener(this.map, 'idle', () => {
+      const { north, south, east, west } = this.map.getBounds().toJSON();
+      const bounds = {
+        northEast: { lat: north, lng: east },
+        southWest: { lat: south, lng: west } };
+      this.props.updateBounds(bounds);
+    });
   }
 
   render() {
