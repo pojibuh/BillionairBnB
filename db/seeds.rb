@@ -57,3 +57,63 @@
 #   lat: 25.112953,
 #   lng: 55.138778
 # )
+
+# santorini = Spot.create(
+#   description: 'seashore villa with an amazing view',
+#   image_url: 'https://t-ec.bstatic.com/images/hotel/max1024x768/731/73116664.jpg',
+#   price: 700,
+#   location: 'santorini',
+#   owner_id: 1,
+#   lat: 36.475422,
+#   lng: 25.413763
+# )
+#
+# singapore = Spot.create(
+#   description: 'modern penthouse in a thriving Singaporean district',
+#   image_url: 'http://propertyinvestment88.sg/wp-content/uploads/2015/10/Singapore-penthouse-for-sale.jpg',
+#   price: 800,
+#   location: 'Singapore',
+#   owner_id: 1,
+#   lat: 1.305224,
+#   lng: 103.913765
+# )
+#
+# san_francisco = Spot.create(
+#   description: 'excellent getaway for tech billionaires',
+#   image_url: 'https://ap.rdcpix.com/1771840340/12a1ef9c744719a43a4890b2aee25f0fl-m0xd-w480_h480_q80.jpg',
+#   price: 1000,
+#   location: 'San Francisco',
+#   owner_id: 1,
+#   lat: 37.788497,
+#   lng: -122.457513
+# )
+#
+# hong_kong = Spot.create(
+#   description: 'an amazing getaway from the bustling metropolis',
+#   image_url: 'https://www.engelvoelkers.com/wp-content/uploads/2014/11/Capture.png',
+#   price: 1200,
+#   location: 'Hong Kong',
+#   owner_id: 1,
+#   lat: 22.246116,
+#   lng: 114.185732
+# )
+#
+# paris = Spot.create(
+#   description: 'gorgeous apartment right on the Champs-Elysees',
+#   image_url: 'http://www.private-homes.com/pictures/m/0/1-paris-apartment-rent1-bedroom-champs-elysees--etoile-foch-private-homes-3.png',
+#   price: 800,
+#   location: 'Paris',
+#   owner_id: 1,
+#   lat: 48.870086,
+#   lng: 2.306588
+# )
+#
+# miami = Spot.create(
+#   description: 'wonderful place right by the beach',
+#   image_url: 'http://i.huffpost.com/gen/765953/images/o-SUNSET-ISLANDS-MIAMI-BEACH-REAL-ESTATE-HOMES-facebook.jpg',
+#   price: 1100,
+#   location: 'Miami',
+#   owner_id: 1,
+#   lat: 25.785435,
+#   lng: -80.131368
+# )
