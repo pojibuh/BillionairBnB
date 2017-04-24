@@ -8,52 +8,52 @@
 
 # demo_user = User.create(email: 'moktar@jama.com', fname: 'Moktar', lname: 'Jama', password: 'password')
 
-# new_york = Spot.create(
-#   description: 'Amazing TriBeCa penthouse',
-#   image_url: 'https://www.thepinnaclelist.com/wp-content/uploads/2014/10/01-48.0-Million-Sky-Lofts-Glasshouse-Penthouse-145-Hudson-Street-New-York-NY-920x700.jpg',
-#   price: 800,
-#   location: 'New York City',
-#   owner_id: 1,
-#   lat: 40.721695,
-#   lng: -74.011635
-# )
-#
-# los_angeles = Spot.create(
-#   description: 'Great mansion in Bel-Air',
-#   image_url: 'https://s-media-cache-ak0.pinimg.com/originals/35/16/65/351665403bad01e7215aca7c2c6d67af.png',
-#   price: 1000,
-#   location: 'Los Angeles',
-#   owner_id: 1,
-#   lat: 34.099428,
-#   lng: -118.461763
-# )
-#
-# london = Spot.create(
-#   description: 'Absolutely regal palace',
-#   image_url: 'https://www.royal.uk/sites/default/files/images/feature/buckingham-palace.jpg',
-#   price: 1000,
-#   location: 'London',
-#   owner_id: 1,
-#   lat: 51.501344,
-#   lng: 0.141890
-# )
-#
-# kanazawa = Spot.create(
-#   description: 'Historic and gorgeous castle',
-#   image_url: 'https://upload.wikimedia.org/wikipedia/commons/c/cd/Kanazawa-M-5935.jpg',
-#   price: 800,
-#   location: 'Kanazawa',
-#   owner_id: 1,
-#   lat: 36.563950,
-#   lng: 136.659507
-# )
-#
-# dubai = Spot.create(
-#   description: 'man-made island for you and your friends to enjoy',
-#   image_url: 'http://www.factsinside.com/wp-content/uploads/2015/05/dubai_nakhell.jpg',
-#   price: 800,
-#   location: 'Dubai',
-#   owner_id: 1,
-#   lat: 25.112953,
-#   lng: 55.138778
-# )
+new_york = Spot.create(
+  description: 'Amazing TriBeCa penthouse',
+  image_url: 'https://www.thepinnaclelist.com/wp-content/uploads/2014/10/01-48.0-Million-Sky-Lofts-Glasshouse-Penthouse-145-Hudson-Street-New-York-NY-920x700.jpg',
+  price: 800,
+  location: 'New York City',
+  owner_id: 1,
+  lat: 40.721695,
+  lng: -74.011635
+)
+
+los_angeles = Spot.create(
+  description: 'Great mansion in Bel-Air',
+  image_url: 'https://s-media-cache-ak0.pinimg.com/originals/35/16/65/351665403bad01e7215aca7c2c6d67af.png',
+  price: 1000,
+  location: 'Los Angeles',
+  owner_id: 1,
+  lat: 34.099428,
+  lng: -118.461763
+)
+
+london = Spot.create(
+  description: 'Absolutely regal palace',
+  image_url: 'https://www.royal.uk/sites/default/files/images/feature/buckingham-palace.jpg',
+  price: 1000,
+  location: 'London',
+  owner_id: 1,
+  lat: 51.501344,
+  lng: 0.141890
+)
+
+kanazawa = Spot.create(
+  description: 'Historic and gorgeous castle',
+  image_url: 'https://upload.wikimedia.org/wikipedia/commons/c/cd/Kanazawa-M-5935.jpg',
+  price: 800,
+  location: 'Kanazawa',
+  owner_id: 1,
+  lat: 36.563950,
+  lng: 136.659507
+)
+
+dubai = Spot.create(
+  description: 'man-made island for you and your friends to enjoy',
+  image_url: 'http://www.factsinside.com/wp-content/uploads/2015/05/dubai_nakhell.jpg',
+  price: 800,
+  location: 'Dubai',
+  owner_id: 1,
+  lat: 25.112953,
+  lng: 55.138778
+)
