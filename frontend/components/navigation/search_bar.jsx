@@ -6,15 +6,22 @@ class SearchBar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      location: '',
       startDate: this.props.startDate,
-      endDate: this.props.endDate
+      endDate: this.props.endDate,
+      guests: 0
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    console.log('hey it works');
+  }
+
+  update(key) {
+    return ((e) => {
+      this.setState({[key]: e.currentTarget.value});
+    });
   }
 
   render() {
@@ -33,6 +40,7 @@ class SearchBar extends React.Component {
                 onFocusChange={focusedInput => this.setState({ focusedInput })}
               />
             <input className="how-many" placeholder="# of Guests"/>
+            <input className="search-submit-button" type="submit"/>
           </form>
         </div>
     );
