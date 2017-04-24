@@ -12,6 +12,7 @@
  *
  *= require_self
  */
+ @import '_datepicker';
  @import 'CalendarDay';
  @import 'CalendarMonth';
  @import 'CalendarMonthGrid';
@@ -24,7 +25,6 @@
  @import 'css_reset';
  @import 'spots';
  @import 'search';
- @import '_datepicker';
 
  body{
   font-family: sans-serif;
@@ -58,7 +58,6 @@
 .navbar-left {
   padding-left: 26px;
   padding-top: 14px;
-  margin-right: 5px;
 }
 
 .navbar-middle {
@@ -72,7 +71,6 @@
 
 .search-bar-shift {
   width: 100%;
-  padding-left: 20px;
 }
 
 .navbar-right-logged-out {

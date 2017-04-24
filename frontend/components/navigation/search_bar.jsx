@@ -9,25 +9,29 @@ class SearchBar extends React.Component {
       startDate: this.props.startDate,
       endDate: this.props.endDate
     };
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    console.log('hey it works');
   }
 
   render() {
     return(
         <div className="search-bar">
-          <form className="search-query">
+          <form className="search-query" onSubmit={(e) => this.handleSubmit(e)}>
             <input
               className="where"
               type="text"
               placeholder="Anywhere"/>
-              <button className="when">
-                <DateRangePicker
-                  startDate={this.state.startDate}
-                  endDate={this.state.endDate}
-                  onDatesChange={({ startDate, endDate }) => this.setState({ startDate, endDate })}
-                  focusedInput={this.state.focusedInput}
-                  onFocusChange={focusedInput => this.setState({ focusedInput })}
-                />
-              </button>
+              <DateRangePicker
+                startDate={this.state.startDate}
+                endDate={this.state.endDate}
+                onDatesChange={({ startDate, endDate }) => this.setState({ startDate, endDate })}
+                focusedInput={this.state.focusedInput}
+                onFocusChange={focusedInput => this.setState({ focusedInput })}
+              />
             <input className="how-many" placeholder="# of Guests"/>
           </form>
         </div>

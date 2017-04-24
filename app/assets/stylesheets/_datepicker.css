@@ -441,7 +441,7 @@
   background: #fff;
   position: relative;
   display: inline-block;
-  width: 90px;
+  width: 100px;
   vertical-align: middle; }
 
 .DateInput--with-caret::before,
@@ -473,7 +473,7 @@
   left: 0;
   border: 0;
   height: 100%;
-  width: 100%; }
+  width: 70%; }
   .DateInput__input[readonly] {
     -moz-user-select: none;
     -webkit-user-select: none;
@@ -509,7 +509,9 @@
 
 .DateRangePicker {
   position: relative;
-  display: inline-block; }
+  display: inline-block;
+  height: 44px;
+}
 
 .DateRangePicker__picker {
   z-index: 1;
