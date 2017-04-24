@@ -1,6 +1,7 @@
 import React from 'react';
 import { DateRangePicker, SingleDatePicker, DayPickerRangeController } from 'react-dates';
 import { fetchBounds } from '../../util/search_api_util';
+import { START_DATE, END_DATE } from 'react-dates/constants';
 import { withRouter } from 'react-router';
 
 class SearchBar extends React.Component {

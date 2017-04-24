@@ -2,7 +2,10 @@ import { UPDATE_BOUNDS } from '../actions/filter_actions';
 import merge from 'lodash/merge';
 
 const _defaultBounds = Object.freeze({
-  bounds: {},
+  bounds: {
+    northeast: {},
+    southwest: {}
+  },
 });
 
 export default function FiltersReducer(state = _defaultBounds, action) {

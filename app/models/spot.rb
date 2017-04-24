@@ -18,10 +18,10 @@ class Spot < ActiveRecord::Base
   validates :lat, :lng, :owner, :price, :location, :image_url, :description, presence: true
 
   def self.in_bounds(bounds)
-    self.where("lat < ?", bounds[:northEast][:lat])
+    self.where("lat < ?", bounds[:northeast][:lat])
         .where("lat > ?", bounds[:southwest][:lat])
         .where("lng > ?", bounds[:southwest][:lng])
-        .where("lng < ?", bounds[:northEast][:lng])
+        .where("lng < ?", bounds[:northeast][:lng])
   end
 
   belongs_to :owner,
