@@ -14,11 +14,7 @@ class Map extends React.Component {
       zoom: 10
     };
     this.map = new google.maps.Map(this.mapNode, mapOptions);
-    if (this.props.bounds.southwest) {
-      let latLngBounds = new google.maps.LatLngBounds(new google.maps.LatLng({lat: this.props.bounds.southwest.lat, lng: this.props.bounds.southwest.lng }),
-      new google.maps.LatLng({lat: this.props.bounds.northeast.lat, lng: this.props.bounds.northeast.lng }));
-      this.map.fitBounds(latLngBounds);
-    }
+    
     this.MarkerManager = new MarkerManager(this.map);
     this.registerEventListeners();
     this.MarkerManager.updateMarkers(this.props.spots);
@@ -53,7 +49,10 @@ class Map extends React.Component {
       const bounds = {
         northeast: { lat: north, lng: east },
         southwest: { lat: south, lng: west } };
-      this.props.updateBounds(bounds);
+
+      if (!isNaN(bounds.northeast.lat)) {
+        this.props.updateBounds(bounds);
+      }
     });
   }
 
