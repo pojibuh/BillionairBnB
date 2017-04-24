@@ -5,7 +5,7 @@ import Map from '../map/map';
 class Search extends React.Component {
 
   componentDidMount() {
-    this.props.fetchSpots();
+    this.props.fetchSpots(this.props.filters);
   }
 
   render() {

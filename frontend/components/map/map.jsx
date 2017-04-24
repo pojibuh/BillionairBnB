@@ -27,8 +27,7 @@ class Map extends React.Component {
     if (this.props.bounds && newprops.bounds) {
       if (newprops.bounds.northeast.lat && this.props.bounds.northeast.lat) {
         let difference = function (a, b) { return Math.abs(a - b); };
-        debugger
-        if (difference(newprops.bounds.northeast.lat, this.props.bounds.northeast.lat) > 0.01) {
+        if (this.map.getZoom() > 8 && difference(newprops.bounds.northeast.lat, this.props.bounds.northeast.lat) > 1) {
           let north = newprops.bounds.northeast.lat;
           let east = newprops.bounds.northeast.lng;
           let south = newprops.bounds.southwest.lat;
