@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import SearchBar from './search_bar';
 import { logout } from '../../actions/session_actions';
+import { updateBounds } from '../../actions/filter_actions';
 
 const mapStateToProps = (state) => {
   return {
@@ -11,7 +12,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    logout: () => dispatch(logout())
+    logout: () => dispatch(logout()),
+    updateBounds: (bounds) => dispatch(updateBounds(bounds))
   };
 };
 

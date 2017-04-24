@@ -1,7 +1,7 @@
 import React from 'react';
 import { DateRangePicker, SingleDatePicker, DayPickerRangeController } from 'react-dates';
 import { fetchBounds } from '../../util/search_api_util';
-import { updateBounds } from '../../actions/filter_actions';
+import { withRouter } from 'react-router';
 
 class SearchBar extends React.Component {
 
@@ -18,9 +18,11 @@ class SearchBar extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    fetchBounds(this.state.address).then(gmaps =>
-      console.log(gmaps.results[0].geometry.viewport)
-    );
+    fetchBounds(this.state.address).then(gmaps => {
+      if (!!gmaps.results[0].geometry.bounds) {
+        this.props.updateBounds(gmaps.results[0].geometry.bounds);
+      }
+    }).then(() => this.props.router.push('/spots'));
   }
 
   update(key) {
@@ -56,4 +58,4 @@ class SearchBar extends React.Component {
   }
 }
 
-export default SearchBar;
+export default withRouter(SearchBar);

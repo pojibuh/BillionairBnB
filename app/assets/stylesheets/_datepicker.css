@@ -302,7 +302,7 @@
     .DayPickerNavigation--vertical .DayPickerNavigation__next--default svg {
       height: 42px;
       width: 42px;
-      fill: #484848; }
+      fill: #676767; }
 
 .DayPickerNavigation--vertical-scrollable {
   position: relative; }
@@ -486,7 +486,7 @@
   overflow: hidden; }
 
 .DateInput__display-text--has-input {
-  color: #484848; }
+  color: #676767; }
 
 .DateInput__display-text--focused {
   background: #99ede6;
@@ -572,7 +572,7 @@
 
 .DateRangePickerInput__arrow svg {
   vertical-align: middle;
-  fill: #484848;
+  fill: #676767;
   height: 20px;
   width: 20px; }
 

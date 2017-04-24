@@ -16,6 +16,10 @@ class Map extends React.Component {
     this.MarkerManager.updateMarkers(this.props.spots);
   }
 
+  componentWillReceiveProps(newprops) {
+    
+  }
+
   componentDidUpdate() {
     this.MarkerManager.updateMarkers(this.props.spots);
   }
@@ -25,7 +29,7 @@ class Map extends React.Component {
       const { north, south, east, west } = this.map.getBounds().toJSON();
       const bounds = {
         northEast: { lat: north, lng: east },
-        southWest: { lat: south, lng: west } };
+        southwest: { lat: south, lng: west } };
       this.props.updateBounds(bounds);
     });
   }

@@ -19,8 +19,8 @@ class Spot < ActiveRecord::Base
 
   def self.in_bounds(bounds)
     self.where("lat < ?", bounds[:northEast][:lat])
-        .where("lat > ?", bounds[:southWest][:lat])
-        .where("lng > ?", bounds[:southWest][:lng])
+        .where("lat > ?", bounds[:southwest][:lat])
+        .where("lng > ?", bounds[:southwest][:lng])
         .where("lng < ?", bounds[:northEast][:lng])
   end
 

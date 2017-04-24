@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
-import SearchBar from './search_bar';
+import SearchBarContainer from './search_bar_container';
 
 class NavigationBar extends React.Component {
 
@@ -18,7 +18,7 @@ class NavigationBar extends React.Component {
           </div>
           <div className="navbar-middle">
             <div className="search-bar-shift">
-              <SearchBar />
+              <SearchBarContainer />
             </div>
           </div>
           <div className="navbar-right-logged-in">
@@ -43,7 +43,7 @@ class NavigationBar extends React.Component {
           </div>
           <div className="navbar-middle">
             <div className="search-bar-shift">
-              <SearchBar />
+              <SearchBarContainer />
             </div>
           </div>
           <div className="navbar-right-logged-out">
