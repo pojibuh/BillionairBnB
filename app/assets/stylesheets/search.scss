@@ -9,10 +9,13 @@
   width: 60%;
   height: 915px;
   overflow: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .all-spots {
-  width: 100%;
+  width: 90%;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
@@ -25,7 +28,7 @@
   align-items: flex-start;
   justify-content: space-around;
   padding-top: 10px;
-  width: 480px;
+  width: 420px;
   height: 310px;
 }
 
@@ -86,10 +89,6 @@
 }
 
 .where:focus {
-  border-bottom: 2px solid #008984;
-}
-
-.when:focus {
   border-bottom: 2px solid #008984;
 }
 

@@ -1,7 +1,8 @@
 export default class MarkerManager {
-  constructor(map) {
+  constructor(map, handleClick) {
     this.map = map;
     this.markers = {};
+    this.handleClick = handleClick;
   }
 
   updateMarkers(spots) {
@@ -15,7 +16,7 @@ export default class MarkerManager {
 
       spotList = spotList.filter(spot => !this.markers[spot.id]);
       spotList.forEach((spot) => {
-        this.createMarkerFromSpot(spot);
+        this.createMarkerFromSpot(spot, this.handleClick);
       });
 
       Object.keys(this.markers)
@@ -31,6 +32,10 @@ export default class MarkerManager {
       spotId: spot.id
     });
     this.markers[marker.spotId] = marker;
+
+    marker.addListener('click', () => this.handleClick(spot));
+    this.markers[marker.spotId] = marker;
+
     marker.setMap(this.map);
   }
 

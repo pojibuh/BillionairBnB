@@ -15,6 +15,7 @@ class Map extends React.Component {
     };
     let mapCoords;
     if (this.props.bounds && typeof this.props.bounds.northeast.lat === 'number') {
+      //refactor 19-25 into its own function
       let north = this.props.bounds.northeast.lat;
       let east = this.props.bounds.northeast.lng;
       let south = this.props.bounds.southwest.lat;
@@ -29,7 +30,7 @@ class Map extends React.Component {
     }
     this.map = new google.maps.Map(this.mapNode, mapCoords);
 
-    this.MarkerManager = new MarkerManager(this.map);
+    this.MarkerManager = new MarkerManager(this.map, this.handleMarkerClick.bind(this));
     this.registerEventListeners();
     this.MarkerManager.updateMarkers(this.props.spots);
   }
@@ -43,6 +44,7 @@ class Map extends React.Component {
       if (newprops.bounds.northeast.lat && this.props.bounds.northeast.lat) {
         let difference = function (a, b) { return Math.abs(a - b); };
         if (this.map.getZoom() > 8 && difference(newprops.bounds.northeast.lat, this.props.bounds.northeast.lat) > 1) {
+          //refactor into own function
           let north = newprops.bounds.northeast.lat;
           let east = newprops.bounds.northeast.lng;
           let south = newprops.bounds.southwest.lat;
@@ -68,6 +70,10 @@ class Map extends React.Component {
         this.props.updateBounds(bounds);
       }
     });
+  }
+
+  handleMarkerClick(spots) {
+    this.props.router.push(`spots/${spots.id}`);
   }
 
   render() {
