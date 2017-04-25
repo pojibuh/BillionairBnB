@@ -14,6 +14,7 @@ class SpotShow extends React.Component {
   render() {
     const spot = this.props.spot;
     if (spot && spot.owner) {
+      const owner = spot.owner;
       return (
         <div className="spot-show-page">
           <div className="spot-image">
@@ -24,7 +25,7 @@ class SpotShow extends React.Component {
               <div className="spot-owner-description">
                 { spot.description }
                 <p> { spot.location } </p>
-                <p> { spot.owner.fname } { spot.owner.lname } </p>
+                <p> { owner.fname } { owner.lname } </p>
               </div>
               <div className="spot-rules">
                 rules go here
