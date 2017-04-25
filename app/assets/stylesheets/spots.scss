@@ -75,6 +75,41 @@
   text-decoration: none;
 }
 
+.spot-show-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.spot-image {
+  width: 100%;
+  height: 620px;
+}
+
+.spot-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.spot-information {
+  width: 1000px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.spot-details {
+  font-size: 30px;
+  font-weight: bold;
+  color: #484848;
+}
+
+.spot-booking {
+  width: 315px;
+  height: 350px;
+  border: 1px solid black;
+}
+
 .description {
   font-size: 15px;
   font-family: sans-serif;

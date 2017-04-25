@@ -15,13 +15,17 @@ class SpotShow extends React.Component {
     const spot = this.props.spot;
     if (spot) {
       return (
-        <div>
+        <div className="spot-show-page">
           <div className="spot-image">
             <img src={spot.image_url} />
           </div>
-          <div className="spot-details">
-            <div>
-              { spot.description }
+          <div className="spot-information">
+            <div className="spot-details">
+              { spot.description }&nbsp;
+              { spot.location }
+            </div>
+            <div className="spot-booking">
+              bookings go here
             </div>
           </div>
         </div>

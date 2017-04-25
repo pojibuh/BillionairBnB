@@ -47,11 +47,14 @@ class SearchBar extends React.Component {
               onDatesChange={({ startDate, endDate }) => this.setState({ startDate, endDate })}
               focusedInput={this.state.focusedInput}
               onFocusChange={focusedInput => this.setState({ focusedInput })} />
-            <input className="how-many" placeholder="# of Guests"/>
+            <input
+              className="how-many"
+              type="number"
+              placeholder="# of Guests"
+              onChange={this.update('guests')} />
             <input
               className="search-submit-button"
-              type="submit"
-              onChange={this.update('guests')} />
+              type="submit" />
           </form>
         </div>
     );
