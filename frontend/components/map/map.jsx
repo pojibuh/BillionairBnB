@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { withRouter } from 'react-router';
 import MarkerManager from '../../util/marker_manager';
 
 class Map extends React.Component {
@@ -83,4 +84,4 @@ class Map extends React.Component {
   }
 }
 
-export default Map;
+export default withRouter(Map);

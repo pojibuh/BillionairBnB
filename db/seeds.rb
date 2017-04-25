@@ -117,3 +117,53 @@
 #   lat: 25.785435,
 #   lng: -80.131368
 # )
+# 
+# barcelona = Spot.create(
+#   description: 'gorgeous home located near the Sagrada Familia',
+#   image_url: 'http://barcelona-home.com/blog/wp-content/upload/2014/08/9_updown_court_win_dlesham.jpg',
+#   price: 800,
+#   location: 'Barcelona',
+#   owner_id: 1,
+#   lat: 41.377032,
+#   lng: 2.188995
+# )
+#
+# milan = Spot.create(
+#   description: 'gorgeous house in the wealthiest Milanese district',
+#   image_url: 'http://www.dreamnewmarket.it/Contents/Houses/7154/1197/xwzf0v0r.jpg',
+#   price: 1000,
+#   location: 'Milan',
+#   owner_id: 1,
+#   lat: 45.361689,
+#   lng: 9.162319
+# )
+#
+# vienna = Spot.create(
+#   description: 'apartment centrally located in Innere Stadt, Vienna',
+#   image_url: 'https://aff.bstatic.com/images/hotel/840x460/137/13767864.jpg',
+#   price: 900,
+#   location: 'Vienna',
+#   owner_id: 1,
+#   lat: 48.210068,
+#   lng: 16.378979
+# )
+#
+# rio = Spot.create(
+#   description: 'wonderful beachside Leblon apartment',
+#   image_url: 'https://www.e-architect.co.uk/images/jpgs/sao_paulo/casa_6_m160310_1.jpg',
+#   price: 1300,
+#   location: 'Rio de Janeiro',
+#   owner_id: 1,
+#   lat: -22.985907,
+#   lng: -43.224665
+# )
+#
+# cape_town = Spot.create(
+#   description: 'amazing place in the suburbs of Cape Town',
+#   image_url: 'https://businesstech.co.za/news/wp-content/uploads/2015/10/R200-million-house.png',
+#   price: 1100,
+#   location: 'Cape Town',
+#   owner_id: 1,
+#   lat: -34.032869,
+#   lng: 18.474536
+# )

@@ -22,6 +22,10 @@
   align-items: space-around;
 }
 
+.all-spots > div {
+  height: 340px;
+}
+
 .search-spots figure {
   display: flex;
   flex-direction: column;
