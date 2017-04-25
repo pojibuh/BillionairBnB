@@ -1,5 +1,5 @@
 import { RECEIVE_SPOTS, RECEIVE_SPOT } from '../actions/spot_actions';
-
+import merge from 'lodash/merge';
 const initialState = {};
 
 export default (state = initialState, action) => {
@@ -8,7 +8,8 @@ export default (state = initialState, action) => {
     case RECEIVE_SPOTS:
       return action.spots;
     case RECEIVE_SPOT:
-      return action.spot;
+      const newSpot = {[action.spot.id]: action.spot};
+      return merge({}, state, newSpot);
     default:
       return state;
   }

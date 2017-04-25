@@ -16,7 +16,7 @@ class Api::SpotsController < ApplicationController
   end
 
   def show
-    @spot = Spot.find_by(params[:id])
+    @spot = Spot.find_by(id: params[:id])
     if @spot
       render :show
     else

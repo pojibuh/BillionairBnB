@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 class SpotIndexItem extends React.Component {
 
@@ -15,15 +16,17 @@ class SpotIndexItem extends React.Component {
       description = spot.description;
     }
     return(
-      <figure className="spot-item">
-        <div className="spot-img">
-          <img src={spot.image_url}/>
-        </div>
-        <div className="spot-info" >
-          <span className="price" key={(spot.id)} >{`$${spot.price},`}</span>
-          <span key={spot.id + 1} className="description">{description}</span>
-        </div>
-      </figure>
+      <Link to={`/spots/${spot.id}`}>
+        <figure className="spot-item">
+          <div className="spot-img">
+            <img src={spot.image_url}/>
+          </div>
+          <div className="spot-info" >
+            <span className="price" key={(spot.id)} >{`$${spot.price},`}</span>
+            <span key={spot.id + 1} className="description">{description}</span>
+          </div>
+        </figure>
+      </Link>
     );
   }
 }

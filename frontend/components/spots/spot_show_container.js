@@ -2,11 +2,9 @@ import { connect } from 'react-redux';
 import { fetchSpot } from '../../actions/spot_actions';
 import SpotShow from './spot_show';
 
-const mapStateToProps = (state, { params }) => {
-  const spotId = parseInt(params.spotId);
+const mapStateToProps = (state, ownProps) => {
   return {
-    spotId,
-    spot: state.spot
+    spot: state.spots[ownProps.params.spotId]
   };
 };
 

@@ -23,6 +23,6 @@ export const fetchSpots = (filters) => dispatch => {
 };
 
 export const fetchSpot = id => dispatch => (
-  APIUtil.fetchSpot(id)
+  SpotApiUtil.fetchSpot(id)
     .then(spot => dispatch(receiveSpot(spot)))
 );

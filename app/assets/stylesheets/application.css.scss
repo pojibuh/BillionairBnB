@@ -26,11 +26,11 @@
  @import 'spots';
  @import 'search';
 
- body{
+body {
   font-family: sans-serif;
- }
+}
 
- #map-container {
+#map-container {
   width: 775px;
   height: 915px;
 }
@@ -40,13 +40,13 @@
   zoom: 22%;
 }
 
- .login-errors {
-   list-style: none;
- }
+.login-errors {
+ list-style: none;
+}
 
- .signup-errors {
-   list-style: none;
- }
+.signup-errors {
+ list-style: none;
+}
 
 .navbar {
   display: flex;

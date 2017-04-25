@@ -50,7 +50,7 @@
   width: 1080px;
 }
 
-.carousel > figure {
+.carousel  figure {
   display: block;
   width: 100%;
 }
@@ -69,6 +69,10 @@
   width: 350px;
   height: 230px;
   margin: 0;
+}
+
+.slick-slide a {
+  text-decoration: none;
 }
 
 .description {
