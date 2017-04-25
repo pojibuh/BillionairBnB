@@ -95,24 +95,46 @@
   width: 1000px;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .spot-details {
+  width: 665px;
   font-size: 30px;
   font-weight: bold;
+  font-family: 'Roboto', sans-serif;
   color: #484848;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.spot-details p {
+  font-size: 16px;
 }
 
 .spot-booking {
   width: 315px;
   height: 350px;
-  border: 1px solid black;
+  border: 1px solid #C0C0C0;
+}
+
+.spot-owner-description {
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.spot-reviews, .spot-rules {
+  border-top: 1px solid #C0C0C0;
+  width: 100%;
+  height: 200px;
 }
 
 .description {
   font-size: 15px;
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;;
   color: #676767;
   font-weight: 600;
 }
@@ -120,7 +142,7 @@
 .price {
   font-size: 15px;
   padding-right: 5px;
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;;
   color: #676767;
   font-weight: 600;
 }

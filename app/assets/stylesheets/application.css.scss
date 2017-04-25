@@ -27,7 +27,7 @@
  @import 'search';
 
 body {
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;;
 }
 
 #map-container {
@@ -53,6 +53,7 @@ body {
   flex-direction: row;
   align-items: flex-start;
   justify-content: center;
+  padding-bottom: 10px;
 }
 
 .navbar-left {

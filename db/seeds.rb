@@ -62,7 +62,7 @@
 #   description: 'seashore villa with an amazing view',
 #   image_url: 'https://t-ec.bstatic.com/images/hotel/max1024x768/731/73116664.jpg',
 #   price: 700,
-#   location: 'santorini',
+#   location: 'Santorini',
 #   owner_id: 1,
 #   lat: 36.475422,
 #   lng: 25.413763
@@ -117,7 +117,7 @@
 #   lat: 25.785435,
 #   lng: -80.131368
 # )
-# 
+#
 # barcelona = Spot.create(
 #   description: 'gorgeous home located near the Sagrada Familia',
 #   image_url: 'http://barcelona-home.com/blog/wp-content/upload/2014/08/9_updown_court_win_dlesham.jpg',
