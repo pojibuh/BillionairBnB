@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 # demo_user = User.create(email: 'moktar@jama.com', fname: 'Moktar', lname: 'Jama', password: 'password')
-
+#
 # new_york = Spot.create(
 #   description: 'Amazing TriBeCa penthouse',
 #   image_url: 'https://www.thepinnaclelist.com/wp-content/uploads/2014/10/01-48.0-Million-Sky-Lofts-Glasshouse-Penthouse-145-Hudson-Street-New-York-NY-920x700.jpg',
@@ -57,7 +57,7 @@
 #   lat: 25.112953,
 #   lng: 55.138778
 # )
-
+#
 # santorini = Spot.create(
 #   description: 'seashore villa with an amazing view',
 #   image_url: 'https://t-ec.bstatic.com/images/hotel/max1024x768/731/73116664.jpg',

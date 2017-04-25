@@ -23,7 +23,7 @@ class SearchBar extends React.Component {
       if (!!gmaps.results[0].geometry.bounds) {
         this.props.updateBounds(gmaps.results[0].geometry.bounds);
       }
-    }).then(() => this.props.router.push('/spots'));
+    }).then(() => this.props.router.push('/search'));
   }
 
   update(key) {

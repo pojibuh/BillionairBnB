@@ -5,3 +5,10 @@ export const fetchSpots = (data) => {
     data: data
   });
 };
+
+export const fetchSpot = (id) => {
+  return $.ajax({
+    method: 'GET',
+    url: `api/spots/${id}`,
+  });
+};

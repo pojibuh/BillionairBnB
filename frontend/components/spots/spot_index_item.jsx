@@ -9,8 +9,8 @@ class SpotIndexItem extends React.Component {
   render() {
     const spot = this.props.spot;
     let description;
-    if (spot.description.length >= 38) {
-      description = spot.description.slice(0, 38) + "...";
+    if (spot.description.length >= 36) {
+      description = spot.description.slice(0, 36) + "...";
     } else {
       description = spot.description;
     }
