@@ -1,5 +1,5 @@
 import React from 'react';
-import { DateRangePicker, SingleDatePicker, DayPickerRangeController } from 'react-dates';
+import { DateRangePicker } from 'react-dates';
 import { fetchBounds } from '../../util/search_api_util';
 import { START_DATE, END_DATE } from 'react-dates/constants';
 import { withRouter } from 'react-router';
@@ -19,6 +19,7 @@ class SearchBar extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    debugger
     fetchBounds(this.state.address).then(gmaps => {
       if (!!gmaps.results[0].geometry.bounds) {
         this.props.updateBounds(gmaps.results[0].geometry.bounds);
@@ -40,18 +41,18 @@ class SearchBar extends React.Component {
               className="where"
               type="text"
               placeholder="Anywhere"
-              onChange={this.update('address')} />
+              onChange={ this.update('address') } />
             <DateRangePicker
-              startDate={this.state.startDate}
-              endDate={this.state.endDate}
+              startDate={ this.state.startDate }
+              endDate={ this.state.endDate }
               onDatesChange={({ startDate, endDate }) => this.setState({ startDate, endDate })}
-              focusedInput={this.state.focusedInput}
-              onFocusChange={focusedInput => this.setState({ focusedInput })} />
+              focusedInput={ this.state.focusedInput }
+              onFocusChange={ focusedInput => this.setState({ focusedInput }) } />
             <input
               className="how-many"
               type="number"
               placeholder="# of Guests"
-              onChange={this.update('guests')} />
+              onChange={ this.update('guests') } />
             <input
               className="search-submit-button"
               type="submit" />
