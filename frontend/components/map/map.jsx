@@ -13,8 +13,22 @@ class Map extends React.Component {
       center: {lat: 40.757433, lng: -73.985807},
       zoom: 10
     };
-    this.map = new google.maps.Map(this.mapNode, mapOptions);
-    
+    let mapCoords;
+    if (this.props.bounds && typeof this.props.bounds.northeast.lat === 'number') {
+      let north = this.props.bounds.northeast.lat;
+      let east = this.props.bounds.northeast.lng;
+      let south = this.props.bounds.southwest.lat;
+      let west = this.props.bounds.southwest.lng;
+
+      let lat = (north + south) / 2;
+      let lng = (east + west) / 2;
+
+      mapCoords = { center: {lat: lat, lng: lng }, zoom: 10};
+    } else {
+      mapCoords = mapOptions;
+    }
+    this.map = new google.maps.Map(this.mapNode, mapCoords);
+
     this.MarkerManager = new MarkerManager(this.map);
     this.registerEventListeners();
     this.MarkerManager.updateMarkers(this.props.spots);
