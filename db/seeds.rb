@@ -15,7 +15,8 @@
 #   location: 'New York City, NY, USA',
 #   owner_id: 1,
 #   lat: 40.721695,
-#   lng: -74.011635
+#   lng: -74.011635,
+#   guest_limit: 5
 # )
 #
 # los_angeles = Spot.create(
@@ -25,7 +26,8 @@
 #   location: 'Los Angeles, CA, USA',
 #   owner_id: 1,
 #   lat: 34.099428,
-#   lng: -118.461763
+#   lng: -118.461763,
+#   guest_limit: 10
 # )
 #
 # london = Spot.create(
@@ -35,7 +37,8 @@
 #   location: 'London, England, UK',
 #   owner_id: 1,
 #   lat: 51.501344,
-#   lng: 0.141890
+#   lng: 0.141890,
+#   guest_limit: 2
 # )
 #
 # kanazawa = Spot.create(
@@ -45,7 +48,8 @@
 #   location: 'Kanazawa, Ishikawa, Japan',
 #   owner_id: 1,
 #   lat: 36.563950,
-#   lng: 136.659507
+#   lng: 136.659507,
+#   guest_limit: 40
 # )
 #
 # dubai = Spot.create(
@@ -55,7 +59,8 @@
 #   location: 'Dubai, UAE',
 #   owner_id: 1,
 #   lat: 25.112953,
-#   lng: 55.138778
+#   lng: 55.138778,
+#   guest_limit: 30
 # )
 #
 # santorini = Spot.create(
@@ -65,7 +70,8 @@
 #   location: 'Santorini, Greece',
 #   owner_id: 1,
 #   lat: 36.475422,
-#   lng: 25.413763
+#   lng: 25.413763,
+#   guest_limit: 7
 # )
 #
 # singapore = Spot.create(
@@ -75,7 +81,8 @@
 #   location: 'Singapore, Singapore',
 #   owner_id: 1,
 #   lat: 1.305224,
-#   lng: 103.913765
+#   lng: 103.913765,
+#   guest_limit: 4
 # )
 #
 # san_francisco = Spot.create(
@@ -85,7 +92,8 @@
 #   location: 'San Francisco, CA, USA',
 #   owner_id: 1,
 #   lat: 37.788497,
-#   lng: -122.457513
+#   lng: -122.457513,
+#   guest_limit: 11
 # )
 #
 # hong_kong = Spot.create(
@@ -95,7 +103,8 @@
 #   location: 'Hong Kong',
 #   owner_id: 1,
 #   lat: 22.246116,
-#   lng: 114.185732
+#   lng: 114.185732,
+#   guest_limit: 20
 # )
 #
 # paris = Spot.create(
@@ -105,7 +114,8 @@
 #   location: 'Paris, France',
 #   owner_id: 1,
 #   lat: 48.870086,
-#   lng: 2.306588
+#   lng: 2.306588,
+#   guest_limit: 6
 # )
 #
 # miami = Spot.create(
@@ -115,7 +125,8 @@
 #   location: 'Miami, Florida, USA',
 #   owner_id: 1,
 #   lat: 25.785435,
-#   lng: -80.131368
+#   lng: -80.131368,
+#   guest_limit: 8
 # )
 #
 # barcelona = Spot.create(
@@ -125,7 +136,8 @@
 #   location: 'Barcelona, Spain',
 #   owner_id: 1,
 #   lat: 41.377032,
-#   lng: 2.188995
+#   lng: 2.188995,
+#   guest_limit: 10
 # )
 #
 # milan = Spot.create(
@@ -135,7 +147,8 @@
 #   location: 'Milan, Italy',
 #   owner_id: 1,
 #   lat: 45.361689,
-#   lng: 9.162319
+#   lng: 9.162319,
+#   guest_limit: 6
 # )
 #
 # vienna = Spot.create(
@@ -145,7 +158,8 @@
 #   location: 'Vienna, Austria',
 #   owner_id: 1,
 #   lat: 48.210068,
-#   lng: 16.378979
+#   lng: 16.378979,
+#   guest_limit: 4
 # )
 #
 # rio = Spot.create(
@@ -155,7 +169,8 @@
 #   location: 'Rio de Janeiro, Brazil',
 #   owner_id: 1,
 #   lat: -22.985907,
-#   lng: -43.224665
+#   lng: -43.224665,
+#   guest_limit: 15
 # )
 #
 # cape_town = Spot.create(
@@ -165,5 +180,6 @@
 #   location: 'Cape Town, South Africa',
 #   owner_id: 1,
 #   lat: -34.032869,
-#   lng: 18.474536
+#   lng: 18.474536,
+#   guest_limit: 10
 # )

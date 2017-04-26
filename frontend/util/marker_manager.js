@@ -19,10 +19,11 @@ export default class MarkerManager {
         this.createMarkerFromSpot(spot, this.handleClick);
       });
 
-      Object.keys(this.markers)
-      .filter(spotId => !spotsObj[spotId])
-      .forEach((spotId) => this.removeMarker(this.markers[spotId]));
     }
+    
+    Object.keys(this.markers)
+    .filter(spotId => !spotsObj[spotId])
+    .forEach((spotId) => this.removeMarker(this.markers[spotId]));
   }
 
   createMarkerFromSpot(spot) {

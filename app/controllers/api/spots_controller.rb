@@ -2,7 +2,7 @@ class Api::SpotsController < ApplicationController
 
   def index
     spots = bounds ? Spot.in_bounds(bounds) : Spot.all
-    @spots = spots
+    @spots = guests ? spots.can_fit_guests(guests.to_i) : spots
     render :index
   end
 
@@ -35,5 +35,9 @@ class Api::SpotsController < ApplicationController
 
   def bounds
     params[:bounds]
+  end
+
+  def guests
+    params[:guests]
   end
 end

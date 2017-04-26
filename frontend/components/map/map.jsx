@@ -68,7 +68,7 @@ class Map extends React.Component {
         southwest: { lat: south, lng: west } };
 
       if (!isNaN(bounds.northeast.lat)) {
-        this.props.updateBounds(bounds);
+        this.props.updateFilter([['bounds', bounds]]);
       }
     });
   }

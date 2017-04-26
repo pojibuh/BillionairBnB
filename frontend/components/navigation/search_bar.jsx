@@ -19,10 +19,17 @@ class SearchBar extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    debugger
+    let guests = this.state.guests;
+    let startDate = this.formatMoment(this.state.startDate);
+    let endDate = this.formatMoment(this.state.endDate);
     fetchBounds(this.state.address).then(gmaps => {
       if (!!gmaps.results[0].geometry.bounds) {
-        this.props.updateBounds(gmaps.results[0].geometry.bounds);
+        this.props.updateFilter([
+          ['bounds', gmaps.results[0].geometry.bounds],
+          ['guests', guests],
+          ['startDate', startDate],
+          ['endDate', endDate]
+        ]);
       }
     }).then(() => this.props.router.push('/search'));
   }
@@ -31,6 +38,13 @@ class SearchBar extends React.Component {
     return ((e) => {
       this.setState({[key]: e.currentTarget.value});
     });
+  }
+
+  formatMoment(moment) {
+    if (moment !== '') {
+      let momentString = moment.format('YYYY,MM,DD');
+      return momentString;
+    }
   }
 
   render() {

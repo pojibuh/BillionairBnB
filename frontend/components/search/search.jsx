@@ -13,7 +13,7 @@ class Search extends React.Component {
       <div>
         <div className="search-page">
           <Map spots={this.props.spots}
-            updateBounds={this.props.updateBounds}
+            updateFilter={this.props.updateFilter}
             bounds={this.props.bounds}/>
           <div className="search-spots">
             <SpotIndex spots={this.props.spots}/>
