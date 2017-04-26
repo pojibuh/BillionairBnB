@@ -36,7 +36,7 @@ class SpotShow extends React.Component {
               </div>
             </div>
             <div className="spot-booking">
-              <BookingContainer />
+              <BookingContainer spot={spot}/>
             </div>
           </div>
         </div>
