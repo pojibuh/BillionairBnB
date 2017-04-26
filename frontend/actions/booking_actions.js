@@ -10,7 +10,7 @@ export const receiveBooking = booking => ({
 
 export const receiveErrors = errors => ({
   type: RECEIVE_ERRORS,
-  booking
+  errors
 });
 
 export const createBooking = booking => dispatch => {

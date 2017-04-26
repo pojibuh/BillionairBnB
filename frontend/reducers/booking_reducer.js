@@ -1,7 +1,9 @@
 import { RECEIVE_BOOKING, RECEIVE_ERRORS } from '../actions/booking_actions';
 import merge from 'lodash/merge';
 
-const initialState = {};
+const initialState = {
+  errors: []
+};
 
 export default (state = initialState, action) => {
   Object.freeze(state);
@@ -11,7 +13,7 @@ export default (state = initialState, action) => {
       return merge({}, state, booking);
     case RECEIVE_ERRORS:
       const errors = action.errors;
-      newState = merge({}, state);
+      let newState = merge({}, state);
       newState.errors = errors;
       return newState;
     default:

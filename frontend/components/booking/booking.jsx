@@ -1,5 +1,6 @@
 import React from 'react';
 import { DateRangePicker } from 'react-dates';
+import { withRouter } from 'react-router';
 import { START_DATE, END_DATE } from 'react-dates/constants';
 
 class Booking extends React.Component {
@@ -18,9 +19,14 @@ class Booking extends React.Component {
     e.preventDefault();
     let startDate = this.formatMoment(this.state.startDate);
     let endDate = this.formatMoment(this.state.endDate);
-    this.props.createBooking({
-      startDate:
-    }).then();
+    if (this.props.currentUser) {
+      this.props.createBooking({
+        start_date: startDate,
+        end_date: endDate,
+        spot_id: this.props.spot.id,
+        guest_number: parseInt(this.state.guests)
+      }).then(() => this.props.router.push(`/spots/${this.props.spot.id}`));
+    }
   }
 
   update(key) {
@@ -42,13 +48,23 @@ class Booking extends React.Component {
     }
   }
 
+  renderErrors() {
+    if (!this.props.currentUser) {
+      return (<h2>Not Logged In</h2>);
+    } else if (this.props.errors) {
+      return (this.props.errors.map((err, idx) => {
+        return (<li key={idx}>{ err }</li>);
+      }));
+    }
+  }
+
   render() {
     const price = this.props.spot.price;
     const dateRange = this.dateRange(this.state.startDate, this.state.endDate);
     const guests = this.state.guests;
     return(
       <div className="booking-container">
-        <form>
+        <form onSubmit={ (e) => this.handleSubmit(e) }>
           <div className="booking-price">
             ${ this.props.spot.price} per night
           </div>
@@ -73,7 +89,9 @@ class Booking extends React.Component {
           <input className="booking-submit" type="submit" value="Book"/>
         </form>
         <div className="booking-errors">
-          
+          <ul>
+            { this.renderErrors() }
+          </ul>
         </div>
       </div>
     );
@@ -81,4 +99,4 @@ class Booking extends React.Component {
 
 }
 
-export default Booking;
+export default withRouter(Booking);

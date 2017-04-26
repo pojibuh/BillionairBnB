@@ -15,8 +15,19 @@
 class Booking < ActiveRecord::Base
   validates :user, :spot, :start_date, :end_date, :guest_number, presence: true
 
-  def overlap?(start_date, end_date)
+  def self.overlap?(start_date, end_date, spot_id)
+    debugger
+    spot_bookings = Spot.find_by(id: spot_id).bookings
+    debugger
+    spot_bookings.none? do |booking|
+      (booking.start_date <=> start_date) == -1 || (end_date <=> booking.start_date) == -1
+    end
+  end
 
+  def self.date_convert(date)
+    date_numbers = date.split(',').map(&:to_i)
+
+    return Date.new(date_numbers[0], date_numbers[1], date_numbers[2])
   end
 
   belongs_to :user
