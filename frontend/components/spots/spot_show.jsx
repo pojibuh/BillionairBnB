@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
+import BookingContainer from '../booking/booking_container';
 
 class SpotShow extends React.Component {
 
@@ -35,7 +36,7 @@ class SpotShow extends React.Component {
               </div>
             </div>
             <div className="spot-booking">
-              bookings go here
+              <BookingContainer />
             </div>
           </div>
         </div>

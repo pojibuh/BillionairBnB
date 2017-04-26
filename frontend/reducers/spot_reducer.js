@@ -4,7 +4,7 @@ const initialState = {};
 
 export default (state = initialState, action) => {
   Object.freeze(state);
-  switch(action.type){
+  switch(action.type) {
     case RECEIVE_SPOTS:
       return action.spots;
     case RECEIVE_SPOT:
