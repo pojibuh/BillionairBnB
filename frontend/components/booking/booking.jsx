@@ -65,9 +65,13 @@ class Booking extends React.Component {
     const guests = this.state.guests;
     return(
       <div className="booking-container">
-        <form onSubmit={ (e) => this.handleSubmit(e) }>
+        <form className="booking-form" onSubmit={ (e) => this.handleSubmit(e) }>
           <div className="booking-price">
             ${ this.props.spot.price} per night
+          </div>
+          <div className="calendar-label">
+            <p>Check In</p>
+            <p>Check Out</p>
           </div>
           <div className="date-range-calendar">
             <DateRangePicker
@@ -77,9 +81,9 @@ class Booking extends React.Component {
               focusedInput={ this.state.focusedInput }
               onFocusChange={ focusedInput => this.setState({ focusedInput }) } />
           </div>
-          <div>
+          <div className="numbers">
             <input
-              className="how-many"
+              className="guest-number"
               type="number"
               placeholder="# of Guests"
               onChange={ this.update('guests') } />

@@ -1,0 +1,49 @@
+.booking-container {
+  width: 100%;
+  height: 100%;
+}
+
+.booking-form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.booking-price{
+  font-size: 20px;
+}
+
+.calendar-label {
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.numbers {
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.guest-number {
+  width: 90%;
+  height: 45px;
+  border: 1px solid #DCDCDC;
+  text-align: center;
+}
+
+.booking-submit {
+  background-color: #FF5A5F;
+  color: #fff;
+  font-weight: 300;
+  padding: 20px 100px 20px 100px;
+}
+
+.booking-submit:hover {
+  cursor: pointer;
+}
