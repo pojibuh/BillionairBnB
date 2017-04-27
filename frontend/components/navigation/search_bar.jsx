@@ -12,17 +12,32 @@ class SearchBar extends React.Component {
       address: '',
       startDate: this.props.startDate,
       endDate: this.props.endDate,
-      guests: 0
+      guests: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.update = this.update.bind(this);
+  }
+
+  componentWillReceiveProps(newProps) {
+    let newLink = newProps.location.pathname;
+    if (this.props.location.pathname !== newLink && newLink !== '/search') {
+      this.setState({
+        address: '',
+        startDate: this.props.startDate,
+        endDate: this.props.endDate,
+        guests: ''
+      });
+    }
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    let guests = this.state.guests;
+    let address = this.state.address;
+    let guests = this.state.guests === '' ? 0 : this.state.guests;
     let startDate = this.formatMoment(this.state.startDate);
     let endDate = this.formatMoment(this.state.endDate);
-    fetchBounds(this.state.address).then(gmaps => {
+
+    fetchBounds(address).then(gmaps => {
       if (!!gmaps.results[0].geometry.bounds) {
         this.props.updateFilter([
           ['bounds', gmaps.results[0].geometry.bounds],
@@ -54,6 +69,7 @@ class SearchBar extends React.Component {
             <input
               className="where"
               type="text"
+              value={ this.state.address }
               placeholder="Anywhere"
               onChange={ this.update('address') } />
             <DateRangePicker
@@ -66,6 +82,7 @@ class SearchBar extends React.Component {
               className="how-many"
               type="number"
               placeholder="# of Guests"
+              value={ this.state.guests }
               onChange={ this.update('guests') } />
             <input
               className="search-submit-button"

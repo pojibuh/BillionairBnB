@@ -2,6 +2,7 @@ import * as APIUtil from '../util/spot_api_util';
 import { fetchSpots } from './spot_actions';
 
 export const UPDATE_FILTER = "UPDATE_FILTER";
+export const CLEAR_FILTER = "CLEAR_FILTER";
 
 export const updateFilter = (filters) => (dispatch, getState) => {
   filters.forEach((filterAttrs) => {
@@ -16,4 +17,8 @@ export const changeFilter = (filter, value) => ({
   type: UPDATE_FILTER,
   filter,
   value
+});
+
+export const clearFilter = () => ({
+  type: CLEAR_FILTER
 });

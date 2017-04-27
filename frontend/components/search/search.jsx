@@ -8,6 +8,10 @@ class Search extends React.Component {
     this.props.fetchSpots(this.props.filters);
   }
 
+  componentWillUnmount() {
+    this.props.clearFilter();
+  }
+
   render() {
     return(
       <div>
