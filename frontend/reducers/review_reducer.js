@@ -7,9 +7,12 @@ export default (state = initialState, action) => {
   Object.freeze(state);
   switch(action.type) {
     case RECEIVE_REVIEWS:
-      return 0;
+      return action.reviews;
     case RECEIVE_REVIEW:
-      return 0;
+      const newReview = {
+        [action.review.id]: action.review
+      };
+      return merge({}, state, newReview);
     default:
       return state;
   }

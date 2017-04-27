@@ -5,3 +5,11 @@ export const createReview = (review) => {
     data: { review }
   });
 };
+
+export const fetchReviews = (data) => {
+  return $.ajax({
+    method: 'GET',
+    url: 'api/reviews',
+    data: data
+  });
+};
