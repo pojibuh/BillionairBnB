@@ -15,6 +15,18 @@ class Booking extends React.Component {
     };
   }
 
+  componentWillReceiveProps(newProps) {
+    if(this.props.errors.length > 0) {
+      this.props.clear();
+    }
+  }
+
+  componentDidMount() {
+    if(this.props.errors.length > 0) {
+      this.props.clear();
+    }
+  }
+
   handleSubmit(e) {
     e.preventDefault();
     this.props.clear();

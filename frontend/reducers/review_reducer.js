@@ -7,9 +7,9 @@ export default (state = initialState, action) => {
   Object.freeze(state);
   switch(action.type) {
     case RECEIVE_REVIEWS:
-
+      return 0;
     case RECEIVE_REVIEW:
-
+      return 0;
     default:
       return state;
   }

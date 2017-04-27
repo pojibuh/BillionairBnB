@@ -18,7 +18,7 @@ export default (state = initialState, action) => {
       return newState;
     case CLEAR_ERRORS:
       let noErrors = action.errors;
-      return merge({}, state, { errors: noErrors });
+      return Object.assign({}, state, { errors: noErrors });
     default:
       return state;
   }
