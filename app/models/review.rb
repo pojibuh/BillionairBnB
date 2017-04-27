@@ -14,6 +14,10 @@
 class Review < ActiveRecord::Base
   validates :spot, :author, :rating, :body, presence: true
 
+  def self.find_reviews(spot_id)
+    Spot.where(id: spot_id)
+  end
+
   belongs_to :spot
 
   belongs_to :author,
