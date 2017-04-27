@@ -1,6 +1,18 @@
 class Api::BookingsController < ApplicationController
 
   def create
+    if start_date == ''
+      render(
+        json: ['Your booking must have a start date.'],
+        status: 422
+      )
+    elsif end_date == ''
+      render(
+        json: ['Your booking must have an end date.'],
+        status: 422
+      )
+    end
+
     parsed_start = Booking.date_convert(start_date)
     parsed_end = Booking.date_convert(end_date)
     @booking = Booking.new({
@@ -10,8 +22,10 @@ class Api::BookingsController < ApplicationController
       user_id: current_user.id,
       guest_number: guests
     })
+
     no_overlap = Booking.no_overlap?(parsed_start, parsed_end, spot_id)
     guest_limit = Booking.guest_limit(spot_id)
+
     if no_overlap && guest_limit >= guests && @booking.save
       render :show
     elsif no_overlap == false && guest_limit < guests

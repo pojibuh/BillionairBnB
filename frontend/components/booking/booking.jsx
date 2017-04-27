@@ -20,13 +20,13 @@ class Booking extends React.Component {
     this.props.clear();
     let startDate = this.formatMoment(this.state.startDate);
     let endDate = this.formatMoment(this.state.endDate);
-    if (this.props.currentUser) {
+    if (this.props.currentUser && this.state.guests > 0 && startDate.length > 0 && endDate.length > 0) {
       this.props.createBooking({
         start_date: startDate,
         end_date: endDate,
         spot_id: this.props.spot.id,
         guest_number: parseInt(this.state.guests)
-      }).then(() => this.props.router.push(`/spots/${this.props.spot.id}`));
+      }).then(() => this.props.router.push(`/`));
     }
   }
 
@@ -89,15 +89,15 @@ class Booking extends React.Component {
               onChange={ this.update('guests') } />
           </div>
           <div className="total-cost">
-            Cost: ${ price } * { dateRange } days * { guests } guests = ${ dateRange * price * guests }
+            ${ price } * { dateRange } days * { guests } guests = ${ dateRange * price * guests }
+          </div>
+          <div className="booking-errors">
+            <ul>
+              { this.renderErrors() }
+            </ul>
           </div>
           <input className="booking-submit" type="submit" value="Book"/>
         </form>
-        <div className="booking-errors">
-          <ul>
-            { this.renderErrors() }
-          </ul>
-        </div>
       </div>
     );
   }

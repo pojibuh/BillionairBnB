@@ -48,3 +48,10 @@
 .booking-submit:hover {
   cursor: pointer;
 }
+
+.booking-errors ul {
+  color: red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
