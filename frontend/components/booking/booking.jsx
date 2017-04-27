@@ -89,7 +89,7 @@ class Booking extends React.Component {
               onChange={ this.update('guests') } />
           </div>
           <div className="total-cost">
-            Total Cost: ${ price } * { dateRange } days * { guests } guests = ${ dateRange * price * guests}
+            Cost: ${ price } * { dateRange } days * { guests } guests = ${ dateRange * price * guests }
           </div>
           <input className="booking-submit" type="submit" value="Book"/>
         </form>
