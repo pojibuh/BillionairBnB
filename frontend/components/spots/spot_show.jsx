@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router';
 import BookingContainer from '../booking/booking_container';
+import ReviewIndexContainer from '../review/review_index_container';
+import ReviewFormContainer from '../review/review_form_container';
 
 class SpotShow extends React.Component {
 
@@ -32,7 +34,8 @@ class SpotShow extends React.Component {
                 rules go here
               </div>
               <div className="spot-reviews">
-                reviews go here
+                <ReviewIndexContainer />
+                <ReviewFormContainer spot={spot}/>
               </div>
             </div>
             <div className="spot-booking">

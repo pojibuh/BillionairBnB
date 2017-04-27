@@ -30,6 +30,8 @@ gem 'validates_email_format_of'
 
 gem 'figaro'
 
+gem 'faker'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
