@@ -37,6 +37,14 @@ class Api::SpotsController < ApplicationController
     params[:bounds]
   end
 
+  def start_date
+    params["start_date"]
+  end
+
+  def end_date
+    params["end_date"]
+  end
+
   def guests
     params[:guests]
   end

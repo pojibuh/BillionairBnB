@@ -17,6 +17,7 @@ class Booking extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    this.props.clear();
     let startDate = this.formatMoment(this.state.startDate);
     let endDate = this.formatMoment(this.state.endDate);
     if (this.props.currentUser) {

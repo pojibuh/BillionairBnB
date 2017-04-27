@@ -30,6 +30,14 @@ class Spot < ActiveRecord::Base
     self.where("guest_limit >= ?", guests)
   end
 
+  # def available_spots(start_date, end_date)
+  #   available = Booking.where(spot_id: self.id)
+  #     .where(<<-SQL, start_date: start_date, end_date: end_date)
+  #        NOT( (start_date > :end_date) OR (end_date < :start_date) )
+  #     SQL
+  #   return available
+  # end
+
   has_many :bookings
 
   belongs_to :owner,

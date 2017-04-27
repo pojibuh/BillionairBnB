@@ -10,8 +10,28 @@ class Api::BookingsController < ApplicationController
       user_id: current_user.id,
       guest_number: guests
     })
-    if @booking.save && !Booking.overlap?(parsed_start, parsed_end, spot_id)
+    no_overlap = Booking.no_overlap?(parsed_start, parsed_end, spot_id)
+    guest_limit = Booking.guest_limit(spot_id)
+    if no_overlap && guest_limit >= guests && @booking.save
       render :show
+    elsif no_overlap == false && guest_limit < guests
+      render(
+        json: [
+          'This booking conflicts with another. Try another date.',
+          'There are too many guests for this location.'
+        ],
+        status: 422
+      )
+    elsif no_overlap == false
+      render(
+        json: ['This booking conflicts with another. Try another date.'],
+        status: 422
+      )
+    elsif guest_limit < guests
+      render(
+        json: ['There are too many guests for this location.'],
+        status: 422
+      )
     else
       render json: @booking.errors.full_messages
     end
@@ -31,7 +51,7 @@ class Api::BookingsController < ApplicationController
   end
 
   def guests
-    params["booking"]["guest_number"]
+    params["booking"]["guest_number"].to_i
   end
 
   def spot_id

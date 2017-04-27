@@ -2,6 +2,7 @@ import * as BookingApiUtil from '../util/booking_api_util';
 
 export const RECEIVE_BOOKING = "RECEIVE_BOOKING";
 export const RECEIVE_ERRORS = "RECEIVE_ERRORS";
+export const CLEAR_ERRORS = "CLEAR_ERRORS";
 
 export const receiveBooking = booking => ({
   type: RECEIVE_BOOKING,
@@ -11,6 +12,11 @@ export const receiveBooking = booking => ({
 export const receiveErrors = errors => ({
   type: RECEIVE_ERRORS,
   errors
+});
+
+export const clearErrors = () => ({
+  type: CLEAR_ERRORS,
+  errors: []
 });
 
 export const createBooking = booking => dispatch => {

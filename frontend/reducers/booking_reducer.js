@@ -1,4 +1,4 @@
-import { RECEIVE_BOOKING, RECEIVE_ERRORS } from '../actions/booking_actions';
+import { RECEIVE_BOOKING, RECEIVE_ERRORS, CLEAR_ERRORS } from '../actions/booking_actions';
 import merge from 'lodash/merge';
 
 const initialState = {
@@ -16,6 +16,9 @@ export default (state = initialState, action) => {
       let newState = merge({}, state);
       newState.errors = errors;
       return newState;
+    case CLEAR_ERRORS:
+      let noErrors = action.errors;
+      return merge({}, state, { errors: noErrors });
     default:
       return state;
   }
