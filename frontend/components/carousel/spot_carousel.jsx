@@ -14,6 +14,7 @@ class SpotCarousel extends React.Component {
   }
 
   render() {
+    //fix this so that featured homes is a separate query entirely
     const spots = Object.values(this.props.spots);
     const settings = {
       infinite: false,
@@ -26,7 +27,7 @@ class SpotCarousel extends React.Component {
     if (spots.length > 0) {
       const featuredSpots = spots.slice(0, 6);
       const otherSpots = spots.slice(6, spots.length);
-      if (featuredSpots.length === 6 && otherSpots.length === (spots.length - featuredSpots.length)) {
+      if (featuredSpots.length === 6 && otherSpots.length === (spots.length - 6)) {
         return (
           <div className="outer-carousel">
             <div className="featured-homes-carousel">

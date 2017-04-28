@@ -3,6 +3,7 @@ import { Link } from 'react-router';
 import BookingContainer from '../booking/booking_container';
 import ReviewIndexContainer from '../review/review_index_container';
 import ReviewFormContainer from '../review/review_form_container';
+import Footer from '../footer/footer';
 
 class SpotShow extends React.Component {
 

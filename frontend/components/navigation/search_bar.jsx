@@ -69,7 +69,7 @@ class SearchBar extends React.Component {
               className="where"
               type="text"
               value={ this.state.address }
-              placeholder="Anywhere"
+              placeholder="Any City"
               onChange={ this.update('address') } />
             <DateRangePicker
               startDate={ this.state.startDate }

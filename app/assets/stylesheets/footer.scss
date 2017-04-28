@@ -1,0 +1,21 @@
+.outer-footer {
+  width: 100%;
+  height: 120px;
+  border-top: 1px solid #dce0e0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner-footer {
+  width: 1070px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.inner-footer p {
+  color: #767676;
+}
