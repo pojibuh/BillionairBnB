@@ -13,6 +13,13 @@ class ReviewForm extends React.Component {
     this.update = this.update.bind(this);
   }
 
+  componentWillReceiveProps(newprops) {
+    this.setState({
+      rating: '',
+      body: ''
+    });
+  }
+
   handleSubmit(e) {
     e.preventDefault();
     const currentUser = this.props.currentUser;
