@@ -27,7 +27,28 @@
 }
 
 .form-rating {
-  font-size: 16px;
+  font-size: 12px;
+  text-align: center;
+  border: 1px solid #676767;
+  width: 110px;
+}
+
+.review-text {
+  border: 1px solid #676767;
+}
+
+.review-text:focus {
+  outline: none;
+}
+
+.rating {
+  width: 100%;
+  font-weight: 400;
+}
+
+.review-form-title {
+  margin: 0 auto;
+  padding: 10px 0 10px 0;
 }
 
 .review-form-submit {

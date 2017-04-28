@@ -19,7 +19,7 @@ class ReviewIndexItem extends React.Component {
           </div>
         </div>
         <div className="review-bottom-half">
-          "{ review.body }"
+          { review.body }
         </div>
       </div>
     );

@@ -44,9 +44,11 @@ class ReviewForm extends React.Component {
   render() {
     return (
       <div className="review-form-box">
+        <h6 className="review-form-title">Write a Review</h6>
         <form onSubmit={ (e) => this.handleSubmit(e) } className="review-form">
           <div className="form-text">
             <textarea
+              className="review-text"
               value={this.state.body}
               onChange={ this.update('body') }
               placeholder="Write a Review"

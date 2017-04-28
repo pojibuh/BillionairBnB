@@ -31,7 +31,7 @@ class SpotShow extends React.Component {
                 <p> { owner.fname } { owner.lname } </p>
               </div>
               <div className="spot-rules">
-                rules go here
+                { spot.rules }
               </div>
               <div className="spot-reviews">
                 <ReviewIndexContainer spot={spot}/>

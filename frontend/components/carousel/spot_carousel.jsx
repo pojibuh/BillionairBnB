@@ -31,7 +31,7 @@ class SpotCarousel extends React.Component {
               Homes
             </div>
             <div className="searchlink">
-              <Link to='/search' className="spots-link">See All</Link>
+              <Link to='/search' className="spots-link">See Map</Link>
             </div>
           </div>
           <div className="inner-carousel">

@@ -6,8 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-demo_user = User.create(email: 'moktar@jama.com', fname: 'Moktar', lname: 'Jama', password: 'password')
-demo_user_2 = User.create(email: 'joktar@mama.com', fname: 'Joktar', lname: 'Mama', password: 'dassworp')
+# demo_user = User.create(email: 'moktar@jama.com', fname: 'Moktar', lname: 'Jama', password: 'password')
+# demo_user_2 = User.create(email: 'joktar@mama.com', fname: 'Joktar', lname: 'Mama', password: 'dassworp')
 
 new_york = Spot.create(
   description: 'Amazing TriBeCa penthouse',
@@ -17,7 +17,8 @@ new_york = Spot.create(
   owner_id: 1,
   lat: 40.721695,
   lng: -74.011635,
-  guest_limit: 5
+  guest_limit: 5,
+  rules: ''
 )
 
 los_angeles = Spot.create(
@@ -28,7 +29,8 @@ los_angeles = Spot.create(
   owner_id: 1,
   lat: 34.099428,
   lng: -118.461763,
-  guest_limit: 10
+  guest_limit: 10,
+  rules: ''
 )
 
 london = Spot.create(
@@ -39,7 +41,8 @@ london = Spot.create(
   owner_id: 1,
   lat: 51.501344,
   lng: 0.141890,
-  guest_limit: 2
+  guest_limit: 2,
+  rules: ''
 )
 
 kanazawa = Spot.create(
@@ -50,7 +53,8 @@ kanazawa = Spot.create(
   owner_id: 1,
   lat: 36.563950,
   lng: 136.659507,
-  guest_limit: 40
+  guest_limit: 40,
+  rules: ''
 )
 
 dubai = Spot.create(
@@ -61,7 +65,8 @@ dubai = Spot.create(
   owner_id: 1,
   lat: 25.112953,
   lng: 55.138778,
-  guest_limit: 30
+  guest_limit: 30,
+  rules: ''
 )
 
 santorini = Spot.create(
@@ -72,7 +77,8 @@ santorini = Spot.create(
   owner_id: 1,
   lat: 36.475422,
   lng: 25.413763,
-  guest_limit: 7
+  guest_limit: 7,
+  rules: ''
 )
 
 singapore = Spot.create(
@@ -83,7 +89,8 @@ singapore = Spot.create(
   owner_id: 1,
   lat: 1.305224,
   lng: 103.913765,
-  guest_limit: 4
+  guest_limit: 4,
+  rules: ''
 )
 
 san_francisco = Spot.create(
@@ -94,7 +101,8 @@ san_francisco = Spot.create(
   owner_id: 1,
   lat: 37.788497,
   lng: -122.457513,
-  guest_limit: 11
+  guest_limit: 11,
+  rules: ''
 )
 
 hong_kong = Spot.create(
@@ -105,7 +113,8 @@ hong_kong = Spot.create(
   owner_id: 1,
   lat: 22.246116,
   lng: 114.185732,
-  guest_limit: 20
+  guest_limit: 20,
+  rules: ''
 )
 
 paris = Spot.create(
@@ -116,7 +125,8 @@ paris = Spot.create(
   owner_id: 1,
   lat: 48.870086,
   lng: 2.306588,
-  guest_limit: 6
+  guest_limit: 6,
+  rules: ''
 )
 
 miami = Spot.create(
@@ -127,7 +137,8 @@ miami = Spot.create(
   owner_id: 1,
   lat: 25.785435,
   lng: -80.131368,
-  guest_limit: 8
+  guest_limit: 8,
+  rules: ''
 )
 
 barcelona = Spot.create(
@@ -138,7 +149,8 @@ barcelona = Spot.create(
   owner_id: 1,
   lat: 41.377032,
   lng: 2.188995,
-  guest_limit: 10
+  guest_limit: 10,
+  rules: ''
 )
 
 milan = Spot.create(
@@ -149,7 +161,8 @@ milan = Spot.create(
   owner_id: 1,
   lat: 45.361689,
   lng: 9.162319,
-  guest_limit: 6
+  guest_limit: 6,
+  rules: ''
 )
 
 vienna = Spot.create(
@@ -160,7 +173,8 @@ vienna = Spot.create(
   owner_id: 1,
   lat: 48.210068,
   lng: 16.378979,
-  guest_limit: 4
+  guest_limit: 4,
+  rules: ''
 )
 
 rio = Spot.create(
@@ -171,7 +185,8 @@ rio = Spot.create(
   owner_id: 1,
   lat: -22.985907,
   lng: -43.224665,
-  guest_limit: 15
+  guest_limit: 15,
+  rules: ''
 )
 
 cape_town = Spot.create(
@@ -182,5 +197,6 @@ cape_town = Spot.create(
   owner_id: 1,
   lat: -34.032869,
   lng: 18.474536,
-  guest_limit: 10
+  guest_limit: 10,
+  rules: ''
 )

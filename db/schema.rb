@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170427141328) do
+ActiveRecord::Schema.define(version: 20170428142732) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(version: 20170427141328) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.integer  "guest_limit", null: false
+    t.string   "rules",       null: false
   end
 
   add_index "spots", ["image_url"], name: "index_spots_on_image_url", using: :btree
