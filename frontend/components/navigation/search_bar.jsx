@@ -19,8 +19,7 @@ class SearchBar extends React.Component {
   }
 
   componentWillReceiveProps(newProps) {
-    let newLink = newProps.location.pathname;
-    if (this.props.location.pathname !== newLink && newLink !== '/search') {
+    if (this.props.location.pathname !== newProps.location.pathname && newProps.location.pathname !== '/search') {
       this.setState({
         address: '',
         startDate: this.props.startDate,

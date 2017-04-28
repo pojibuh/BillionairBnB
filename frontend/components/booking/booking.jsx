@@ -63,7 +63,7 @@ class Booking extends React.Component {
 
   renderErrors() {
     if (!this.props.currentUser) {
-      return (<h2>Not Logged In</h2>);
+      return (<li><h2>Not Logged In</h2></li>);
     } else if (this.props.errors) {
       return (this.props.errors.map((err, idx) => {
         return (<li key={idx}>{ err }</li>);
