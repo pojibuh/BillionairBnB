@@ -14,6 +14,10 @@ class ReviewForm extends React.Component {
   }
 
   componentWillReceiveProps(newprops) {
+    this.clearInputs();
+  }
+
+  clearInputs() {
     this.setState({
       rating: '',
       body: ''
@@ -28,6 +32,7 @@ class ReviewForm extends React.Component {
     const spot = this.props.spot;
     const fullState = Object.assign(this.state, {spot_id: spot.id});
     if ((rating > 0 && rating < 6) && body && currentUser) {
+      this.clearInputs();
       this.props.createReview(fullState);
     }
   }
