@@ -15,6 +15,8 @@ class SpotCarousel extends React.Component {
 
   render() {
     const spots = Object.values(this.props.spots);
+    const featuredSpots = spots.slice(0, 6);
+    const otherSpots = spots.slice(6, spots.length);
     const settings = {
       infinite: false,
       speed: 500,
@@ -26,21 +28,41 @@ class SpotCarousel extends React.Component {
     if (spots.length > 0) {
       return (
         <div className="outer-carousel">
-          <div className="carousel-header">
-            <div className="carousel-header-title">
-              Homes
+          <div className="featured-homes-carousel">
+            <div className="carousel-header">
+              <div className="carousel-header-title">
+                Featured Homes
+              </div>
+              <div className="searchlink">
+                <Link to='/search' className="spots-link">See Map</Link>
+              </div>
             </div>
-            <div className="searchlink">
-              <Link to='/search' className="spots-link">See Map</Link>
+            <div className="inner-carousel">
+              <Slider {...settings} >
+                  {featuredSpots.map((spot, idx) => {
+                    return <div key={idx}><SpotIndexItem spot={spot} key={idx}/></div>;
+                  })
+                }
+              </Slider>
             </div>
           </div>
-          <div className="inner-carousel">
-            <Slider {...settings} >
-                {spots.map((spot, idx) => {
-                  return <div key={idx}><SpotIndexItem spot={spot} key={idx}/></div>;
-                })
-              }
-            </Slider>
+          <div className="other-homes-carousel">
+            <div className="carousel-header">
+              <div className="carousel-header-title">
+                More Homes
+              </div>
+              <div className="searchlink">
+                <Link to='/search' className="spots-link">See Map</Link>
+              </div>
+            </div>
+            <div className="inner-carousel">
+              <Slider {...settings} >
+                  {otherSpots.map((spot, idx) => {
+                    return <div key={idx}><SpotIndexItem spot={spot} key={idx}/></div>;
+                  })
+                }
+              </Slider>
+            </div>
           </div>
         </div>
       );
