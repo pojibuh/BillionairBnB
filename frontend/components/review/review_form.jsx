@@ -48,7 +48,7 @@ class ReviewForm extends React.Component {
               className="rating"
               value={this.state.rating}
               onChange={ this.update('rating') }
-              placeholder="Rate your stay (1 to 5, worst to best)"/>
+              placeholder="Rating (1 to 5)"/>
           </div>
           <input type="submit" value="Submit Review" className="review-form-submit"/>
         </form>

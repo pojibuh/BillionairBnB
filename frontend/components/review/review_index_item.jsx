@@ -15,11 +15,11 @@ class ReviewIndexItem extends React.Component {
           { review.author.fname }
           </div>
           <div className="review-rating">
-            { review.rating }
+            Rating: { review.rating } out of 5
           </div>
         </div>
         <div className="review-bottom-half">
-          { review.body }
+          "{ review.body }"
         </div>
       </div>
     );
