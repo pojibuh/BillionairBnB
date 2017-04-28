@@ -18,7 +18,7 @@ new_york = Spot.create(
   lat: 40.721695,
   lng: -74.011635,
   guest_limit: 5,
-  rules: ''
+  rules: Faker::StarWars.quote
 )
 
 los_angeles = Spot.create(
@@ -30,7 +30,7 @@ los_angeles = Spot.create(
   lat: 34.099428,
   lng: -118.461763,
   guest_limit: 10,
-  rules: ''
+  rules: "Your name can't be DJ Jazzy Jeff"
 )
 
 london = Spot.create(
@@ -42,7 +42,7 @@ london = Spot.create(
   lat: 51.501344,
   lng: 0.141890,
   guest_limit: 2,
-  rules: ''
+  rules: Faker::Hipster.sentence
 )
 
 kanazawa = Spot.create(
@@ -54,7 +54,7 @@ kanazawa = Spot.create(
   lat: 36.563950,
   lng: 136.659507,
   guest_limit: 40,
-  rules: ''
+  rules: Faker::ChuckNorris.fact
 )
 
 dubai = Spot.create(
@@ -66,7 +66,7 @@ dubai = Spot.create(
   lat: 25.112953,
   lng: 55.138778,
   guest_limit: 30,
-  rules: ''
+  rules: Faker::StarWars.quote
 )
 
 santorini = Spot.create(
@@ -78,7 +78,7 @@ santorini = Spot.create(
   lat: 36.475422,
   lng: 25.413763,
   guest_limit: 7,
-  rules: ''
+  rules: Faker::StarWars.quote
 )
 
 singapore = Spot.create(
@@ -90,7 +90,7 @@ singapore = Spot.create(
   lat: 1.305224,
   lng: 103.913765,
   guest_limit: 4,
-  rules: ''
+  rules: Faker::ChuckNorris.fact
 )
 
 san_francisco = Spot.create(
@@ -102,7 +102,7 @@ san_francisco = Spot.create(
   lat: 37.788497,
   lng: -122.457513,
   guest_limit: 11,
-  rules: ''
+  rules: Faker::Hipster.sentence
 )
 
 hong_kong = Spot.create(
@@ -114,7 +114,7 @@ hong_kong = Spot.create(
   lat: 22.246116,
   lng: 114.185732,
   guest_limit: 20,
-  rules: ''
+  rules: Faker::StarWars.quote
 )
 
 paris = Spot.create(
@@ -126,7 +126,7 @@ paris = Spot.create(
   lat: 48.870086,
   lng: 2.306588,
   guest_limit: 6,
-  rules: ''
+  rules: Faker::StarWars.quote
 )
 
 miami = Spot.create(
@@ -138,7 +138,7 @@ miami = Spot.create(
   lat: 25.785435,
   lng: -80.131368,
   guest_limit: 8,
-  rules: ''
+  rules: Faker::ChuckNorris.fact
 )
 
 barcelona = Spot.create(
@@ -150,7 +150,7 @@ barcelona = Spot.create(
   lat: 41.377032,
   lng: 2.188995,
   guest_limit: 10,
-  rules: ''
+  rules: Faker::Hipster.sentence
 )
 
 milan = Spot.create(
@@ -162,7 +162,7 @@ milan = Spot.create(
   lat: 45.361689,
   lng: 9.162319,
   guest_limit: 6,
-  rules: ''
+  rules: Faker::StarWars.quote
 )
 
 vienna = Spot.create(
@@ -174,7 +174,7 @@ vienna = Spot.create(
   lat: 48.210068,
   lng: 16.378979,
   guest_limit: 4,
-  rules: ''
+  rules: Faker::ChuckNorris.fact
 )
 
 rio = Spot.create(
@@ -186,7 +186,7 @@ rio = Spot.create(
   lat: -22.985907,
   lng: -43.224665,
   guest_limit: 15,
-  rules: ''
+  rules: Faker::Hipster.sentence
 )
 
 cape_town = Spot.create(
@@ -198,5 +198,5 @@ cape_town = Spot.create(
   lat: -34.032869,
   lng: 18.474536,
   guest_limit: 10,
-  rules: ''
+  rules: Faker::StarWars.quote
 )

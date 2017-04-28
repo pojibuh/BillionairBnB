@@ -93,6 +93,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 20px;
+  height: 90%;
 }
 
 .spot-image {
@@ -142,10 +144,30 @@
   justify-content: space-around;
 }
 
-.spot-reviews, .spot-rules {
+.spot-reviews {
   border-top: 1px solid #C0C0C0;
   width: 100%;
   height: 200px;
+}
+
+.spot-rules {
+  border-top: 1px solid #C0C0C0;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.rules-header {
+  margin: 0;
+  align-self: flex-start;
+}
+
+.rules {
+  font-size: 16px;
+  font-weight: 300;
 }
 
 .description {

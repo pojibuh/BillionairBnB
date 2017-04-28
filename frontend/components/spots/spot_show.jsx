@@ -16,6 +16,7 @@ class SpotShow extends React.Component {
   }
 
   render() {
+    //make sure to add footer here as well
     const spot = this.props.spot;
     if (spot && spot.owner) {
       const owner = spot.owner;
@@ -32,7 +33,8 @@ class SpotShow extends React.Component {
                 <p> { owner.fname } { owner.lname } </p>
               </div>
               <div className="spot-rules">
-                { spot.rules }
+                <h4 className="rules-header">House Rules</h4>
+                <p className="rules">{ spot.rules }</p>
               </div>
               <div className="spot-reviews">
                 <ReviewIndexContainer spot={spot}/>
