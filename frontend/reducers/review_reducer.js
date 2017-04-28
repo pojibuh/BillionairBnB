@@ -1,4 +1,4 @@
-import { RECEIVE_REVIEWS, RECEIVE_REVIEW } from '../actions/booking_actions';
+import { RECEIVE_REVIEWS, RECEIVE_REVIEW } from '../actions/review_actions';
 import merge from 'lodash/merge';
 
 const initialState = {};

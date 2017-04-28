@@ -4,13 +4,14 @@ import { fetchReviews } from '../../actions/review_actions';
 
 const mapStateToProps = state => {
   return {
-    currentUser: state.session.currentUser
+    currentUser: state.session.currentUser,
+    reviews: state.reviews
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    fetchReviews: () => dispatch(fetchReviews())
+    fetchReviews: (id) => dispatch(fetchReviews(id))
   };
 };
 

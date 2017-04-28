@@ -13,8 +13,8 @@ export const receiveReview = review => ({
   review
 });
 
-export const fetchReviews = () => dispatch => {
-  return ReviewApiUtil.fetchReviews()
+export const fetchReviews = (id) => dispatch => {
+  return ReviewApiUtil.fetchReviews(id)
     .then(reviews => dispatch(receiveReviews(reviews)));
 };
 

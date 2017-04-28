@@ -8,15 +8,17 @@ class ReviewIndex extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchReviews();
+    this.props.fetchReviews({
+      spot_id: this.props.spot.id
+    });
   }
 
   render() {
     const reviews = Object.values(this.props.reviews);
-    let allReviews = reviews.map((review, idx) => {
-      return <div key={idx}><ReviewIndexItem review={review} key={idx}/></div>;
-    });
-    if (reviews.length > 0) {
+    if(reviews.length > 0) {
+      let allReviews = reviews.map((review, idx) => {
+        return <div key={idx}><ReviewIndexItem review={review} key={idx}/></div>;
+      });
       return (
         <div className="all-reviews">
           { allReviews }

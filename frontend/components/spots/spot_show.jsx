@@ -34,7 +34,7 @@ class SpotShow extends React.Component {
                 rules go here
               </div>
               <div className="spot-reviews">
-                <ReviewIndexContainer />
+                <ReviewIndexContainer spot={spot}/>
                 <ReviewFormContainer spot={spot}/>
               </div>
             </div>
