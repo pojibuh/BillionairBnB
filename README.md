@@ -1,4 +1,4 @@
-== BillionairBnB
+# BillionairBnB
 
 Link to live site: [BillionairBnB](billionairbnb.herokuapp.com)
 
