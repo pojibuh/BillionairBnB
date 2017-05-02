@@ -6,8 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-# demo_user = User.create(email: 'moktar@jama.com', fname: 'Moktar', lname: 'Jama', password: 'password')
-# demo_user_2 = User.create(email: 'joktar@mama.com', fname: 'Joktar', lname: 'Mama', password: 'dassworp')
+demo_user = User.create(email: 'moktar@jama.com', fname: 'Moktar', lname: 'Jama', password: 'password')
+demo_user_2 = User.create(email: 'joktar@mama.com', fname: 'Joktar', lname: 'Mama', password: 'dassworp')
 
 new_york = Spot.create(
   description: 'Amazing TriBeCa penthouse',
