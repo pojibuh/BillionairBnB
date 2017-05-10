@@ -38,14 +38,12 @@ class SearchBar extends React.Component {
 
     fetchBounds(address).then(gmaps => {
       if (!!gmaps.results[0].geometry.bounds) {
-        debugger
         this.props.updateFilter([
           ['bounds', gmaps.results[0].geometry.viewport],
           ['guests', guests],
           ['startDate', startDate],
           ['endDate', endDate]
         ]);
-        debugger
       }
     }).then(() => this.props.router.push('/search'));
   }

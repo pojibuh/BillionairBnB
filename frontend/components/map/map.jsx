@@ -14,23 +14,13 @@ class Map extends React.Component {
       center: {lat: 40.757433, lng: -73.985807},
       zoom: 10
     };
-    let mapCoords;
-    if (this.props.bounds && typeof this.props.bounds.northeast.lat === 'number') {
-      //refactor 19-25 into its own function
-      let north = this.props.bounds.northeast.lat;
-      let east = this.props.bounds.northeast.lng;
-      let south = this.props.bounds.southwest.lat;
-      let west = this.props.bounds.southwest.lng;
+    this.map = new google.maps.Map(this.mapNode, mapOptions);
 
-      let lat = (north + south) / 2;
-      let lng = (east + west) / 2;
-
-      mapCoords = { center: {lat: lat, lng: lng }, zoom: 10};
-    } else {
-      mapCoords = mapOptions;
+    if (typeof this.props.bounds.northeast.lat === 'number') {
+      let latLngBounds = new google.maps.LatLngBounds(new google.maps.LatLng({lat: this.props.bounds.southwest.lat, lng: this.props.bounds.southwest.lng }),
+      new google.maps.LatLng({lat: this.props.bounds.northeast.lat, lng: this.props.bounds.northeast.lng }));
+      this.map.fitBounds(latLngBounds);
     }
-    this.map = new google.maps.Map(this.mapNode, mapCoords);
-
     this.MarkerManager = new MarkerManager(this.map, this.handleMarkerClick.bind(this));
     this.registerEventListeners();
     this.MarkerManager.updateMarkers(this.props.spots);
@@ -41,22 +31,12 @@ class Map extends React.Component {
   }
 
   componentWillReceiveProps(newprops) {
-    if (this.props.bounds && newprops.bounds) {
-      if (newprops.bounds.northeast.lat && this.props.bounds.northeast.lat) {
-        let difference = function (a, b) { return Math.abs(a - b); };
-        if (this.map.getZoom() > 8 && difference(newprops.bounds.northeast.lat, this.props.bounds.northeast.lat) > 1) {
-          //refactor into own function
-          let north = newprops.bounds.northeast.lat;
-          let east = newprops.bounds.northeast.lng;
-          let south = newprops.bounds.southwest.lat;
-          let west = newprops.bounds.southwest.lng;
+    debugger
+    if (newprops.bounds.northeast.lat && newprops.bounds.northeast.lat !== this.props.bounds.northeast.lat) {
+      let latLngBounds = new google.maps.LatLngBounds(new google.maps.LatLng({lat: newprops.bounds.southwest.lat, lng: newprops.bounds.southwest.lng }),
+      new google.maps.LatLng({lat: newprops.bounds.northeast.lat, lng: newprops.bounds.northeast.lng }));
 
-          let lat = (north + south) / 2;
-          let lng = (east + west) / 2;
-          this.map.setCenter({lat: lat, lng: lng});
-          this.map.setZoom(10);
-        }
-      }
+      this.map.fitBounds(latLngBounds);
     }
   }
 
