@@ -6,6 +6,7 @@ const _defaultFilter = Object.freeze({
     northeast: {},
     southwest: {}
   },
+  address: '',
   guests: 0,
   startDate: '',
   endDate: ''

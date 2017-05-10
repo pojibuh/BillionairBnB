@@ -18,7 +18,8 @@ class Search extends React.Component {
         <div className="search-page">
           <Map spots={this.props.spots}
             updateFilter={this.props.updateFilter}
-            bounds={this.props.bounds}/>
+            bounds={this.props.bounds}
+            address={this.props.address}/>
           <div className="search-spots">
             <SpotIndex spots={this.props.spots}/>
           </div>

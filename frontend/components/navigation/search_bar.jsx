@@ -37,12 +37,13 @@ class SearchBar extends React.Component {
     let endDate = this.formatMoment(this.state.endDate);
 
     fetchBounds(address).then(gmaps => {
-      if (!!gmaps.results[0].geometry.bounds) {
+      if (!!gmaps.results[0].geometry.viewport) {
         this.props.updateFilter([
           ['bounds', gmaps.results[0].geometry.viewport],
           ['guests', guests],
           ['startDate', startDate],
-          ['endDate', endDate]
+          ['endDate', endDate],
+          ['address', gmaps.results[0].formatted_address]
         ]);
       }
     }).then(() => this.props.router.push('/search'));

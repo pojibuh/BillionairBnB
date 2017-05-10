@@ -31,8 +31,7 @@ class Map extends React.Component {
   }
 
   componentWillReceiveProps(newprops) {
-    debugger
-    if (newprops.bounds.northeast.lat && newprops.bounds.northeast.lat !== this.props.bounds.northeast.lat) {
+    if (newprops.address && newprops.address !== this.props.address) {
       let latLngBounds = new google.maps.LatLngBounds(new google.maps.LatLng({lat: newprops.bounds.southwest.lat, lng: newprops.bounds.southwest.lng }),
       new google.maps.LatLng({lat: newprops.bounds.northeast.lat, lng: newprops.bounds.northeast.lng }));
 

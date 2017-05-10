@@ -7,7 +7,8 @@ const mapStateToProps = (state) => {
   return {
     spots: state.spots,
     bounds: state.filters.bounds,
-    filters: state.filters
+    filters: state.filters,
+    address: state.filters.address
   };
 };
 
