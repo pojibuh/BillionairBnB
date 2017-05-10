@@ -38,6 +38,7 @@ class SearchBar extends React.Component {
 
     fetchBounds(address).then(gmaps => {
       if (!!gmaps.results[0].geometry.bounds) {
+        // debugger
         this.props.updateFilter([
           ['bounds', gmaps.results[0].geometry.bounds],
           ['guests', guests],
