@@ -39,9 +39,6 @@ class Map extends React.Component {
     }
 
     let zoom = this.map.getZoom();
-    if (zoom < 3) {
-      this.map.setZoom(3);
-    }
   }
 
   registerEventListeners() {
