@@ -3,7 +3,6 @@ import { Link } from 'react-router';
 import BookingContainer from '../booking/booking_container';
 import ReviewIndexContainer from '../review/review_index_container';
 import ReviewFormContainer from '../review/review_form_container';
-import Footer from '../footer/footer';
 
 class SpotShow extends React.Component {
 
@@ -16,7 +15,6 @@ class SpotShow extends React.Component {
   }
 
   render() {
-    //make sure to add footer here as well
     const spot = this.props.spot;
     if (spot && spot.owner) {
       const owner = spot.owner;
