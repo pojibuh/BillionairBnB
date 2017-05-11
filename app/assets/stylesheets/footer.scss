@@ -19,3 +19,66 @@
 .inner-footer p {
   color: #767676;
 }
+
+.icons {
+  cursor: default;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.icons a {
+  cursor: pointer;
+}
+
+ul.icons li {
+	display: inline-block;
+	line-height: 1em;
+	padding-left: 0.25em;
+  cursor: pointer;
+}
+
+.icon {
+	text-decoration: none;
+	position: relative;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.icon.circle {
+	transition: all 0.2s ease-in-out;
+	border-radius: 100%;
+	display: inline-block;
+	height: 2em;
+	left: 0;
+	line-height: 2em;
+	text-align: center;
+	text-decoration: none;
+	top: 0;
+	width: 2em;
+}
+
+.icon.circle:hover {
+	top: -0.2em;
+  background-color: rgba(255, 255, 255, 0.075);
+}
+
+.fa-github {
+	background: transparent;
+	color: #676767;
+  border: 1px solid #676767;
+}
+
+.fa-linkedin-square {
+	background: transparent;
+	color: #676767;
+  border: 1px solid #676767;
+}
+
+.fa-angellist {
+	background: transparent;
+	color: #676767;
+  border: 1px solid #676767;
+}
