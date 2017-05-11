@@ -51,12 +51,17 @@ body {
  list-style: none;
 }
 
+.homepage {
+  min-width: 1200px;
+}
+
 .navbar {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: center;
   padding-bottom: 10px;
+  min-width: 1200px;
 }
 
 .navbar-left {
