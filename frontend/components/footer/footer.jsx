@@ -8,7 +8,7 @@ class Footer extends React.Component {
         <div className="inner-footer">
           <div className="footer-left-side">
             <p>This is a Moktar Jama production</p>
-            <p>Done solely for educational purposes</p>
+            <a target="_blank" className="footer-link "href="http://www.moktarjama.com">Check out my site!</a>
           </div>
           <div className="footer-right-side">
             <ul className="icons">

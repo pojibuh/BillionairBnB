@@ -34,12 +34,12 @@
 .form-rating {
   font-size: 12px;
   text-align: center;
-  border: 1px solid #676767;
+  border: 1px solid #DCDCDC;
   width: 110px;
 }
 
 .review-text {
-  border: 1px solid #676767;
+  border: 1px solid #DCDCDC;
 }
 
 .review-text:focus {
@@ -49,6 +49,23 @@
 .rating {
   width: 100%;
   font-weight: 400;
+}
+
+.review-box {
+  width: 300px;
+  height: 170px;
+  background-color: #DCDCDC;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.review-form {
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .review-form-title {
@@ -63,6 +80,7 @@
   font-size: 16px;
   font-weight: 400;
   border-radius: 4px;
+  width: 145px;
 }
 
 .review-form-submit:hover {
