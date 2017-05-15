@@ -12,9 +12,9 @@ class Footer extends React.Component {
           </div>
           <div className="footer-right-side">
             <ul className="icons">
-              <li><a href="https://github.com/pojibuh" className="icon fa fa-github circle"></a></li>
-              <li><a href="https://angel.co/moktar-jama-1" className="icon fa fa-angellist circle"></a></li>
-              <li><a href="https://www.linkedin.com/in/moktar-jama-40631094/" className="icon fa fa-linkedin-square circle"></a></li>
+              <li><a target="_blank" href="https://github.com/pojibuh" className="icon fa fa-github circle"></a></li>
+              <li><a target="_blank" href="https://angel.co/moktar-jama-1" className="icon fa fa-angellist circle"></a></li>
+              <li><a target="_blank" href="https://www.linkedin.com/in/moktar-jama-40631094/" className="icon fa fa-linkedin-square circle"></a></li>
             </ul>
           </div>
         </div>
