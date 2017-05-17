@@ -31,6 +31,7 @@ class Map extends React.Component {
   }
 
   componentWillReceiveProps(newprops) {
+    
     if (newprops.address && newprops.address !== this.props.address) {
       let latLngBounds = new google.maps.LatLngBounds(new google.maps.LatLng({lat: newprops.bounds.southwest.lat, lng: newprops.bounds.southwest.lng }),
       new google.maps.LatLng({lat: newprops.bounds.northeast.lat, lng: newprops.bounds.northeast.lng }));
@@ -38,7 +39,6 @@ class Map extends React.Component {
       this.map.fitBounds(latLngBounds);
     }
 
-    let zoom = this.map.getZoom();
   }
 
   registerEventListeners() {

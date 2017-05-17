@@ -35,6 +35,23 @@ class Map extends React.Component {
 }
 ```
 
+In order to make this possible, the viewport coordinates are parsed from the Google Geocoder API response, and then used to reconfigure the map to the location that the user requested. Due to Google Maps' flexibility, BillionairBnB users can search anything from neighborhoods to countries. An initial problem I had while implementing this feature was that the Google Geocoder functions for moving the map, such as fitBounds, would set the bounds to be slightly wider than intended, which would be perceived as a difference. As a result, the map would endlessly try to fit itself to the new bounds. My solution was to focus on the address from the API response, since that always remained constant.
+
+```JavaScript
+class Map extends React.Component {
+  componentWillReceiveProps(newprops) {
+
+    if (newprops.address && newprops.address !== this.props.address) {
+      let latLngBounds = new google.maps.LatLngBounds(new google.maps.LatLng({lat: newprops.bounds.southwest.lat, lng: newprops.bounds.southwest.lng }),
+      new google.maps.LatLng({lat: newprops.bounds.northeast.lat, lng: newprops.bounds.northeast.lng }));
+
+      this.map.fitBounds(latLngBounds);
+    }
+
+  }
+}
+```
+
 ### Bookings
 
 When a user wants to book a spot to stay in, they use the dynamic React Dates calendar, which is a library maintained by Airbnb. After inputting the start and end dates of their stay, there is a database check that makes sure that there are no conflicting bookings. If there is any conflict, an error is raised, and the user knows to modify the dates of their stay.
