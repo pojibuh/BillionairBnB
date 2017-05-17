@@ -51,9 +51,14 @@ class Api::BookingsController < ApplicationController
     end
   end
 
+  def index
+    @bookings = Booking.find_bookings(current_user.id)
+    render :index
+  end
+
   private
   def booking_params
-    params.require(:booking).permit(:start_date, :end_date, :guest_number, :spot_id)
+    params.require(:booking).permit(:start_date, :end_date, :guest_number, :spot_id, :user_id)
   end
 
   def start_date
@@ -71,4 +76,5 @@ class Api::BookingsController < ApplicationController
   def spot_id
     params["booking"]["spot_id"].to_i
   end
+
 end

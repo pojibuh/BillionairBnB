@@ -33,6 +33,10 @@ class Booking < ActiveRecord::Base
     spot.guest_limit
   end
 
+  def self.find_bookings(user_id)
+    Booking.where(user_id: user_id)
+  end
+
   belongs_to :user
 
   belongs_to :spot
