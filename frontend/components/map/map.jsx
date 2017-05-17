@@ -55,7 +55,7 @@ class Map extends React.Component {
   }
 
   handleMarkerClick(spots) {
-    this.props.router.push(`spots/${spots.id}`);
+    this.props.router.push(`/spots/${spots.id}`);
   }
 
   render() {

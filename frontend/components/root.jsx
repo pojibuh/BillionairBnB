@@ -12,8 +12,8 @@ const Root = ({ store }) => {
       <Router history={ hashHistory } >
         <Route path='/' component={ App } >
           <IndexRoute component={ HomepageContainer } />
-          <Route path='search' component={ SearchContainer } />
-          <Route path='spots/:spotId' component={ SpotShowContainer } />
+          <Route path='/search' component={ SearchContainer } />
+          <Route path='/spots/:spotId' component={ SpotShowContainer } />
         </Route>
       </Router>
     </Provider>
