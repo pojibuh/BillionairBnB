@@ -1,7 +1,7 @@
 export const fetchSpots = (data) => {
   return $.ajax({
     method: 'GET',
-    url: 'api/spots',
+    url: '/api/spots',
     data: data
   });
 };
@@ -9,6 +9,6 @@ export const fetchSpots = (data) => {
 export const fetchSpot = (id) => {
   return $.ajax({
     method: 'GET',
-    url: `api/spots/${id}`,
+    url: `/api/spots/${id}`,
   });
 };
