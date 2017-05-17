@@ -59,7 +59,7 @@ kanazawa = Spot.create(
 
 dubai = Spot.create(
   description: 'man-made island for you and your friends to enjoy',
-  image_url: 'http://www.factsinside.com/wp-content/uploads/2015/05/dubai_nakhell.jpg',
+  image_url: 'https://ak3.picdn.net/shutterstock/videos/3730241/thumb/1.jpg?i10c=img.resize(height:72)',
   price: 800,
   location: 'Dubai, UAE',
   owner_id: 1,
@@ -83,7 +83,7 @@ santorini = Spot.create(
 
 singapore = Spot.create(
   description: 'modern penthouse in a thriving Singaporean district',
-  image_url: 'http://propertyinvestment88.sg/wp-content/uploads/2015/10/Singapore-penthouse-for-sale.jpg',
+  image_url: 'https://sg1-cdn.pgimgs.com/listing/18888255/UPHO.53580206.V800/New-Penthouse-Jurong-Amazing-Water-Views%21-Boon-Lay-Jurong-Tuas-Singapore.jpg',
   price: 800,
   location: 'Singapore, Singapore',
   owner_id: 1,
@@ -119,7 +119,7 @@ hong_kong = Spot.create(
 
 paris = Spot.create(
   description: 'gorgeous apartment right on the Champs-Elysees',
-  image_url: 'http://www.private-homes.com/pictures/m/0/1-paris-apartment-rent1-bedroom-champs-elysees--etoile-foch-private-homes-3.png',
+  image_url: 'https://s-ec.bstatic.com/images/hotel/max1024x768/258/25889444.jpg',
   price: 800,
   location: 'Paris, France',
   owner_id: 1,
@@ -131,7 +131,7 @@ paris = Spot.create(
 
 miami = Spot.create(
   description: 'wonderful place right by the beach',
-  image_url: 'http://i.huffpost.com/gen/765953/images/o-SUNSET-ISLANDS-MIAMI-BEACH-REAL-ESTATE-HOMES-facebook.jpg',
+  image_url: 'https://cdn1.vox-cdn.com/uploads/chorus_asset/file/6569739/20160505_01_DSC_1862_HDR_LR.JPG',
   price: 1100,
   location: 'Miami, Florida, USA',
   owner_id: 1,
@@ -143,7 +143,7 @@ miami = Spot.create(
 
 barcelona = Spot.create(
   description: 'gorgeous home located near the Sagrada Familia',
-  image_url: 'http://barcelona-home.com/blog/wp-content/upload/2014/08/9_updown_court_win_dlesham.jpg',
+  image_url: 'https://69b0d6debb47579c9a280043-costadeltennis.netdna-ssl.com/wp-content/uploads/2017/04/playafels-barcelona-hotel6.jpg',
   price: 800,
   location: 'Barcelona, Spain',
   owner_id: 1,
@@ -155,7 +155,7 @@ barcelona = Spot.create(
 
 milan = Spot.create(
   description: 'gorgeous house in the wealthiest Milanese district',
-  image_url: 'http://www.dreamnewmarket.it/Contents/Houses/7154/1197/xwzf0v0r.jpg',
+  image_url: 'https://www.milanmuseumguide.com/wp-content/uploads/Villa-Necchi-Campiglio-Milan-624x414.jpg',
   price: 1000,
   location: 'Milan, Italy',
   owner_id: 1,
