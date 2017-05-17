@@ -6,10 +6,9 @@ export const createBooking = (booking) => {
   });
 };
 
-export const fetchBookings = (data) => {
+export const fetchBookings = () => {
   return $.ajax({
     method: 'GET',
-    url: '/api/bookings',
-    data: data
+    url: '/api/bookings'
   });
 };
