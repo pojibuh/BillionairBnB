@@ -12,7 +12,6 @@ class BookingIndex extends React.Component {
   }
 
   render() {
-    debugger
     const bookings = Object.values(this.props.bookings);
     if(bookings.length > 0 && this.props.currentUser) {
       let allBookings = bookings.map((booking, idx) => {

@@ -7,7 +7,6 @@ class BookingIndexItem extends React.Component {
   }
 
   render() {
-    debugger
     const booking = this.props.booking;
     return (
       <div className="individual-spot">
