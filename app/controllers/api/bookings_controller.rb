@@ -11,7 +11,12 @@ class Api::BookingsController < ApplicationController
         json: ['Your booking must have an end date.'],
         status: 422
       )
-    elsif start_date != '' && end_date != ''
+    elsif guests == 0
+      render(
+        json: ['There must be at least one guest.'],
+        status: 422
+      )
+    elsif start_date != '' && end_date != '' && guests > 0
       parsed_start = Booking.date_convert(start_date)
       parsed_end = Booking.date_convert(end_date)
       @booking = Booking.new({

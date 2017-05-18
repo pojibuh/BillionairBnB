@@ -32,7 +32,7 @@ class Booking extends React.Component {
     this.props.clear();
     let startDate = this.formatMoment(this.state.startDate);
     let endDate = this.formatMoment(this.state.endDate);
-    if (this.props.currentUser && this.state.guests > 0) {
+    if (this.props.currentUser) {
       this.props.createBooking({
         start_date: startDate,
         end_date: endDate,
