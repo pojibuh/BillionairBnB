@@ -3,6 +3,7 @@ import BookingIndex from './booking_index';
 import { fetchBookings } from '../../actions/booking_actions';
 
 const mapStateToProps = state => {
+  debugger
   return {
     currentUser: state.session.currentUser,
     bookings: state.bookings
