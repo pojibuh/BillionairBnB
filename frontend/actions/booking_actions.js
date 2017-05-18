@@ -26,7 +26,7 @@ export const clearErrors = () => ({
 });
 
 export const fetchBookings = () => dispatch => {
-  return ReviewApiUtil.fetchBookings()
+  return BookingApiUtil.fetchBookings()
     .then(bookings => dispatch(receiveBookings(bookings)));
 };
 

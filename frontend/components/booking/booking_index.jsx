@@ -12,16 +12,19 @@ class BookingIndex extends React.Component {
   }
 
   render() {
+    debugger
     const bookings = Object.values(this.props.bookings);
-    if(bookings.length > 0) {
+    if(bookings.length > 0 && this.props.currentUser) {
       let allBookings = bookings.map((booking, idx) => {
         return <div key={idx}><BookingIndexItem booking={booking} key={idx}/></div>;
       });
       return (
-        <div className="all-bookinga">
+        <div className="all-bookings">
           { allBookings }
         </div>
       );
+    } else if (!this.props.currentUser) {
+      return (<div>You must be logged in to view your bookings</div>);
     } else {
       return (<div>You have not made any bookings yet</div>);
     }

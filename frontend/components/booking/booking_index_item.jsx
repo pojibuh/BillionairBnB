@@ -7,20 +7,20 @@ class BookingIndexItem extends React.Component {
   }
 
   render() {
-    const booking = this.props.booking;
     debugger
+    const booking = this.props.booking;
     return (
-      <div className="individual-review">
+      <div className="individual-spot">
         <div className="review-top-half">
           <div className="review-user">
-          { booking.spot.location }
+            here is { booking.start_date }
           </div>
           <div className="review-rating">
-            Start Date: { booking.start_date }
+            Start Date: swag
           </div>
         </div>
         <div className="review-bottom-half">
-          { booking.spot.description }
+          and { booking.end_date }
         </div>
       </div>
     );
