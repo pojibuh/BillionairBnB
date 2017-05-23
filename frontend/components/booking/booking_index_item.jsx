@@ -8,21 +8,27 @@ class BookingIndexItem extends React.Component {
 
   render() {
     const booking = this.props.booking;
-    return (
-      <div className="individual-spot">
-        <div className="review-top-half">
-          <div className="review-user">
-            here is { booking.start_date }
+    const spot = booking.spot;
+    debugger
+    if (spot) {
+      return (
+        <div className="individual-spot">
+          <div className="review-top-half">
+            <div className="review-user">
+              here is { booking.spot.description }
+            </div>
+            <div className="review-rating">
+              Start Date: swag
+            </div>
           </div>
-          <div className="review-rating">
-            Start Date: swag
+          <div className="review-bottom-half">
+            and { booking.end_date }
           </div>
         </div>
-        <div className="review-bottom-half">
-          and { booking.end_date }
-        </div>
-      </div>
-    );
+      );
+    } else {
+      return (<div></div>);
+    }
   }
 }
 
