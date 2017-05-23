@@ -64,4 +64,14 @@
 .all-bookings {
   display: flex;
   flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.individual-spot {
+
+}
+
+.individual-spot img {
+  width: 400px;
+  height: 275px;
 }

@@ -9,16 +9,16 @@ class BookingIndexItem extends React.Component {
   render() {
     const booking = this.props.booking;
     const spot = booking.spot;
-    debugger
     if (spot) {
       return (
         <div className="individual-spot">
+        <h2></h2>
           <div className="review-top-half">
             <div className="review-user">
-              here is { booking.spot.description }
+              { spot.description }
             </div>
             <div className="review-rating">
-              Start Date: swag
+              <img src={spot.image_url} />
             </div>
           </div>
           <div className="review-bottom-half">
