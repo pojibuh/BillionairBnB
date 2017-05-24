@@ -15,11 +15,13 @@ class BookingIndex extends React.Component {
     const bookings = Object.values(this.props.bookings);
     if(bookings.length > 0 && this.props.currentUser) {
       let allBookings = bookings.map((booking, idx) => {
-        return <div key={idx}><BookingIndexItem booking={booking} key={idx}/></div>;
+        return <div key={idx} className="individual-spot-container">
+                  <BookingIndexItem booking={booking} key={idx}/>
+               </div>;
       });
       return (
         <div className="bookings-page">
-          <h2>Your Trips</h2>
+          <h2 className="bookings-page-title">Your Trips</h2>
           <div className="all-bookings">
             { allBookings }
           </div>

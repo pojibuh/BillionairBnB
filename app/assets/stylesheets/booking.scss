@@ -73,9 +73,21 @@
   justify-content: space-around;
 }
 
+.bookings-page-title {
+  font-size: 26px;
+  color: #676767;
+  font-weight: 600;
+}
+
+.individual-spot-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .individual-spot {
-  width: 450px;
-  height: 300px;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -90,4 +102,10 @@
 .spot-image {
   width: 400px;
   height: 275px;
+}
+
+.spot-desc, .booking-range {
+  font-size: 17px;
+  color: #676767;
+  font-weight: 400;
 }
