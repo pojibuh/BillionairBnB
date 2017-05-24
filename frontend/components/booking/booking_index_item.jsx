@@ -12,7 +12,6 @@ class BookingIndexItem extends React.Component {
     if (spot) {
       return (
         <div className="individual-spot">
-        <h2></h2>
           <div className="review-top-half">
             <div className="review-user">
               { spot.description }

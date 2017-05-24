@@ -61,6 +61,12 @@
   align-items: center;
 }
 
+.bookings-page {
+  display: flex;
+  flex-direction: column;
+  
+}
+
 .all-bookings {
   display: flex;
   flex-flow: row wrap;
@@ -68,7 +74,10 @@
 }
 
 .individual-spot {
-
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .individual-spot img {

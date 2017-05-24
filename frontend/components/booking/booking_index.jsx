@@ -18,8 +18,11 @@ class BookingIndex extends React.Component {
         return <div key={idx}><BookingIndexItem booking={booking} key={idx}/></div>;
       });
       return (
-        <div className="all-bookings">
-          { allBookings }
+        <div className="bookings-page">
+          <div className="all-bookings">
+            <h2>Your Trips</h2>
+            { allBookings }
+          </div>
         </div>
       );
     } else if (!this.props.currentUser) {
