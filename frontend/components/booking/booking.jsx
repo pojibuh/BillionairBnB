@@ -38,7 +38,7 @@ class Booking extends React.Component {
         end_date: endDate,
         spot_id: this.props.spot.id,
         guest_number: parseInt(this.state.guests)
-      }).then(() => this.props.router.push(`/`));
+      }).then(() => this.props.router.push(`/bookings`));
     }
   }
 

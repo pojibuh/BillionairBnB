@@ -15,7 +15,7 @@ class BookingIndexItem extends React.Component {
           <div className="spot-desc">
             { spot.location }
           </div>
-          <div className="spot-image">
+          <div className="booking-spot-image">
             <img src={spot.image_url} />
           </div>
           <div className="booking-range">
