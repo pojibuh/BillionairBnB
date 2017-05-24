@@ -106,6 +106,14 @@
   text-decoration: none;
   outline: none;
   color: #676767;
+  padding-bottom: 3px;
+  border-bottom: 2px solid transparent;
+}
+
+#book-link:hover {
+  border-bottom: 2px solid #676767;
+  cursor: pointer;
+  margin-bottom: 3px;
 }
 
 .booking-spot-image {

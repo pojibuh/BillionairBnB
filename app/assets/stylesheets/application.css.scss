@@ -69,13 +69,20 @@ body {
   padding-top: 14px;
 }
 
-.navbar-middle {
-  width: 88%;
+.navbar-middle-logged-out, .navbar-middle-logged-in {
   padding-top: 5px;
   align-self: center;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+}
+
+.navbar-middle-logged-out {
+  width: 88%;
+}
+
+.navbar-middle-logged-in {
+  width: 75%;
 }
 
 .search-bar-shift {
@@ -91,7 +98,7 @@ body {
 }
 
 .navbar-right-logged-in {
-  width: 200px;
+  width: 300px;
   padding: 18px 12px 18px 14px;
   display: flex;
   flex-direction: row;
