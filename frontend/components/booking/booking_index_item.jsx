@@ -12,16 +12,14 @@ class BookingIndexItem extends React.Component {
     if (spot) {
       return (
         <div className="individual-spot">
-          <div className="review-top-half">
-            <div className="review-user">
-              { spot.description }
-            </div>
-            <div className="review-rating">
-              <img src={spot.image_url} />
-            </div>
+          <div className="spot-desc">
+            { spot.location }
           </div>
-          <div className="review-bottom-half">
-            and { booking.end_date }
+          <div className="spot-image">
+            <img src={spot.image_url} />
+          </div>
+          <div className="booking-range">
+            { booking.start_date } to { booking.end_date }
           </div>
         </div>
       );
