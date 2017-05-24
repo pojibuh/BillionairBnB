@@ -19,8 +19,8 @@ class BookingIndex extends React.Component {
       });
       return (
         <div className="bookings-page">
+          <h2>Your Trips</h2>
           <div className="all-bookings">
-            <h2>Your Trips</h2>
             { allBookings }
           </div>
         </div>

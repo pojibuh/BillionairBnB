@@ -62,9 +62,9 @@
 }
 
 .bookings-page {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  
 }
 
 .all-bookings {
@@ -75,6 +75,7 @@
 
 .individual-spot {
   width: 450px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -83,4 +84,8 @@
 .individual-spot img {
   width: 400px;
   height: 275px;
+}
+
+.spot-image {
+  width: 100%;
 }
