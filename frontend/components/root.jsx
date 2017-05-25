@@ -8,12 +8,13 @@ import BookingIndexContainer from './booking/booking_index_container';
 import App from './app';
 
 const Root = ({ store }) => {
+
   const redirectIfLoggedOut = (nextState, replace) => {
     if (!store.getState().session.currentUser) {
       replace('/');
     }
   };
-
+  
   return (
     <Provider store={ store } >
       <Router onUpdate={() => window.scrollTo(0, 0)} history={ browserHistory } >

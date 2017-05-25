@@ -27,8 +27,6 @@ class BookingIndex extends React.Component {
           </div>
         </div>
       );
-    } else if (!this.props.currentUser) {
-      return (<div>You must be logged in to view your bookings</div>);
     } else {
       return (<div>You have not made any bookings yet</div>);
     }
