@@ -1,6 +1,6 @@
 # BillionairBnB
 
-Link to live site: [BillionairBnB](http://billionairbnb.us)
+Link to live site: [BillionairBnB](https://billionairbnb.herokuapp.com/)
 
 BillionairBnB is an application that allows its users to stay at luxury homes around the world. It is inspired by Airbnb, and was built using a Ruby on Rails backend, the React/Redux framework on the frontend, and a PostgreSQL database.
 
